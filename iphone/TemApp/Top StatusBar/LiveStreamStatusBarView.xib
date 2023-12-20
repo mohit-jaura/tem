@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LiveStreamStatusBarView" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="514" height="74"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8UB-KY-5S8">
+                    <rect key="frame" x="5" y="12" width="504" height="23"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="splashLogo" translatesAutoresizingMaskIntoConstraints="NO" id="A46-vW-z80">
+                            <rect key="frame" x="10" y="-53" width="30" height="128"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="5wE-lS-R45"/>
+                                <constraint firstAttribute="width" secondItem="A46-vW-z80" secondAttribute="height" multiplier="1:1" id="Q0o-HS-nSB"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="📹 Admin is Live. Join to see what they’re talking about." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUI-H1-36W">
+                            <rect key="frame" x="50" y="1" width="399" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="1p7-jC-Rlg"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                            <color key="textColor" name="AppColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbm-b6-Ar2">
+                            <rect key="frame" x="459" y="-8.3333333333333339" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Bbm-b6-Ar2" secondAttribute="height" multiplier="1:1" id="9r1-eu-iwZ"/>
+                                <constraint firstAttribute="width" constant="40" id="m4J-o4-s6X"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="close@3x"/>
+                            <connections>
+                                <action selector="buttonAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dSh-Sv-J9t"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kUI-H1-36W" firstAttribute="centerY" secondItem="8UB-KY-5S8" secondAttribute="centerY" id="2AE-1B-NgE"/>
+                        <constraint firstAttribute="trailing" secondItem="Bbm-b6-Ar2" secondAttribute="trailing" constant="5" id="LmZ-xK-hWa"/>
+                        <constraint firstItem="kUI-H1-36W" firstAttribute="leading" secondItem="A46-vW-z80" secondAttribute="trailing" constant="10" id="aHG-cg-PQ0"/>
+                        <constraint firstItem="A46-vW-z80" firstAttribute="leading" secondItem="8UB-KY-5S8" secondAttribute="leading" constant="10" id="hW0-lU-VLM"/>
+                        <constraint firstItem="A46-vW-z80" firstAttribute="centerY" secondItem="8UB-KY-5S8" secondAttribute="centerY" id="j2q-YO-Rpu"/>
+                        <constraint firstItem="Bbm-b6-Ar2" firstAttribute="leading" secondItem="kUI-H1-36W" secondAttribute="trailing" constant="10" id="m0E-kR-WDF"/>
+                        <constraint firstItem="Bbm-b6-Ar2" firstAttribute="centerY" secondItem="8UB-KY-5S8" secondAttribute="centerY" id="nSa-Nh-xah"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="CustomBlackColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="8UB-KY-5S8" secondAttribute="top" constant="5" id="9mZ-8q-w88"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8UB-KY-5S8" secondAttribute="trailing" constant="5" id="RDf-vf-NuP"/>
+                <constraint firstItem="8UB-KY-5S8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="hYv-AP-gcQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8UB-KY-5S8" secondAttribute="bottom" constant="5" id="j0j-fN-RTm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="containerView" destination="8UB-KY-5S8" id="PVM-v5-rd1"/>
+                <outlet property="label" destination="kUI-H1-36W" id="0ad-vc-hJe"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="-122.27488151658767"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close@3x" width="13" height="13"/>
+        <image name="splashLogo" width="341.33334350585938" height="341.33334350585938"/>
+        <namedColor name="AppColor">
+            <color red="0.0" green="0.58823529411764708" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="CustomBlackColor">
+            <color red="0.1803921568627451" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

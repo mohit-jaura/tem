@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="KGk-i7-Jjw" customClass="UpcomingChallengeJoinTableViewCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hx5-Ky-WJ5" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                        <rect key="frame" x="5" y="5" width="405" height="290"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8C-s0-thE" customClass="UpcomingChallengeHoneyCombView" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="405" height="290"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="290" id="xq3-hd-W8f"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYX-Y6-xVr">
+                        <rect key="frame" x="132.5" y="230" width="150" height="40"/>
+                        <color key="backgroundColor" name="AppCyanColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="aQs-q8-pVq"/>
+                            <constraint firstAttribute="width" constant="150" id="jte-HW-hqx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
+                        <state key="normal" title="Join">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="joinTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dtK-oq-M0M"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" name="appThemeColorGrayish"/>
+                <constraints>
+                    <constraint firstItem="k8C-s0-thE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="4Lx-e2-zLo"/>
+                    <constraint firstItem="wYX-Y6-xVr" firstAttribute="bottom" secondItem="k8C-s0-thE" secondAttribute="bottom" constant="-25" id="ACZ-Rh-smE"/>
+                    <constraint firstItem="hx5-Ky-WJ5" firstAttribute="bottom" secondItem="k8C-s0-thE" secondAttribute="bottom" id="Mg2-YT-JT9"/>
+                    <constraint firstItem="wYX-Y6-xVr" firstAttribute="centerX" secondItem="k8C-s0-thE" secondAttribute="centerX" id="PLd-Dj-Peb"/>
+                    <constraint firstItem="hx5-Ky-WJ5" firstAttribute="top" secondItem="k8C-s0-thE" secondAttribute="top" id="e4O-bh-LMs"/>
+                    <constraint firstAttribute="bottom" secondItem="k8C-s0-thE" secondAttribute="bottom" constant="5" id="eEq-3c-cqJ"/>
+                    <constraint firstItem="hx5-Ky-WJ5" firstAttribute="trailing" secondItem="k8C-s0-thE" secondAttribute="trailing" id="foz-Fs-mhd"/>
+                    <constraint firstAttribute="trailing" secondItem="k8C-s0-thE" secondAttribute="trailing" constant="5" id="rW3-ht-uJt"/>
+                    <constraint firstItem="hx5-Ky-WJ5" firstAttribute="leading" secondItem="k8C-s0-thE" secondAttribute="leading" id="who-Mk-woI"/>
+                    <constraint firstItem="k8C-s0-thE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="yqg-iK-uG8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backView" destination="hx5-Ky-WJ5" id="bMP-kc-5Nx"/>
+                <outlet property="honeyCombView" destination="k8C-s0-thE" id="mPc-8k-Ozz"/>
+                <outlet property="joinButton" destination="wYX-Y6-xVr" id="1aW-8j-U0q"/>
+                <outlet property="metricsViewHeightConstraint" destination="xq3-hd-W8f" id="E1N-RG-OzU"/>
+            </connections>
+            <point key="canvasLocation" x="-20" y="77.361319340329842"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AppCyanColor">
+            <color red="0.015686274509803921" green="0.9137254901960784" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="appThemeColorGrayish">
+            <color red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

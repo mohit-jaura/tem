@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyMediaMessageTableViewCell" rowHeight="88" id="KGk-i7-Jjw" customClass="MyMediaMessageTableViewCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x0-B3-d6i" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                        <rect key="frame" x="80" y="5" width="220" height="127.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jz1-2J-vmS">
+                        <rect key="frame" x="80" y="5" width="220" height="127.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="127.5" id="bei-0q-4zD"/>
+                            <constraint firstAttribute="width" constant="220" id="pnv-yP-w5C"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QIA-Ng-Tts" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="80" y="5" width="220" height="127.5"/>
+                        <connections>
+                            <action selector="imageFullPreviewButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0zV-1y-V8v"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1L-ae-P0X" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="165" y="44" width="50" height="50"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="StV-LS-hft"/>
+                            <constraint firstAttribute="height" constant="50" id="U6p-UF-3nF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Open">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="openPdfButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jo2-pz-6zU"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dob-FU-CcY" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="165" y="44" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="hUr-bA-mhX"/>
+                            <constraint firstAttribute="height" constant="50" id="uJA-9s-7XF"/>
+                        </constraints>
+                        <state key="normal" image="play.png"/>
+                        <connections>
+                            <action selector="videoPlayButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6op-EH-KSy"/>
+                        </connections>
+                    </button>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jeR-pX-cJM">
+                        <rect key="frame" x="180" y="59" width="20" height="20"/>
+                    </activityIndicatorView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdfColored" translatesAutoresizingMaskIntoConstraints="NO" id="2eL-G7-7RK">
+                        <rect key="frame" x="257" y="13" width="35" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="9aO-m8-QYs"/>
+                            <constraint firstAttribute="height" constant="40" id="aWA-93-WPm"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QIA-Ng-Tts" firstAttribute="top" secondItem="jz1-2J-vmS" secondAttribute="top" id="41f-kl-fNS"/>
+                    <constraint firstItem="s1L-ae-P0X" firstAttribute="trailing" secondItem="dob-FU-CcY" secondAttribute="trailing" id="5rY-h9-nnx"/>
+                    <constraint firstItem="5x0-B3-d6i" firstAttribute="top" secondItem="jz1-2J-vmS" secondAttribute="top" id="6c5-yS-7rn"/>
+                    <constraint firstItem="5x0-B3-d6i" firstAttribute="bottom" secondItem="jz1-2J-vmS" secondAttribute="bottom" id="75K-2i-7xa"/>
+                    <constraint firstItem="jz1-2J-vmS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8lr-XW-0bw"/>
+                    <constraint firstAttribute="trailing" secondItem="jz1-2J-vmS" secondAttribute="trailing" constant="20" id="J94-Sd-D6x"/>
+                    <constraint firstItem="dob-FU-CcY" firstAttribute="centerX" secondItem="jz1-2J-vmS" secondAttribute="centerX" id="R5D-a5-ZvM"/>
+                    <constraint firstItem="QIA-Ng-Tts" firstAttribute="leading" secondItem="jz1-2J-vmS" secondAttribute="leading" id="S5D-rF-oPD"/>
+                    <constraint firstItem="jeR-pX-cJM" firstAttribute="centerX" secondItem="jz1-2J-vmS" secondAttribute="centerX" id="TNK-OP-lli"/>
+                    <constraint firstItem="s1L-ae-P0X" firstAttribute="bottom" secondItem="dob-FU-CcY" secondAttribute="bottom" id="Ulg-EN-g1x"/>
+                    <constraint firstAttribute="bottom" secondItem="jz1-2J-vmS" secondAttribute="bottom" constant="8" id="WCk-Ag-Fb8"/>
+                    <constraint firstItem="2eL-G7-7RK" firstAttribute="trailing" secondItem="jz1-2J-vmS" secondAttribute="trailing" constant="-8" id="YdK-0s-MzL"/>
+                    <constraint firstItem="2eL-G7-7RK" firstAttribute="top" secondItem="jz1-2J-vmS" secondAttribute="top" constant="8" id="ZlU-dx-xMs"/>
+                    <constraint firstItem="s1L-ae-P0X" firstAttribute="leading" secondItem="dob-FU-CcY" secondAttribute="leading" id="bmq-c4-iHp"/>
+                    <constraint firstItem="s1L-ae-P0X" firstAttribute="top" secondItem="dob-FU-CcY" secondAttribute="top" id="he6-lY-M7I"/>
+                    <constraint firstItem="5x0-B3-d6i" firstAttribute="trailing" secondItem="jz1-2J-vmS" secondAttribute="trailing" id="m8h-F3-XUH"/>
+                    <constraint firstItem="jeR-pX-cJM" firstAttribute="centerY" secondItem="jz1-2J-vmS" secondAttribute="centerY" id="mQ4-ea-JgK"/>
+                    <constraint firstItem="dob-FU-CcY" firstAttribute="centerY" secondItem="jz1-2J-vmS" secondAttribute="centerY" id="mze-Nt-TVd"/>
+                    <constraint firstItem="QIA-Ng-Tts" firstAttribute="trailing" secondItem="jz1-2J-vmS" secondAttribute="trailing" id="pGo-jB-5s8"/>
+                    <constraint firstItem="QIA-Ng-Tts" firstAttribute="bottom" secondItem="jz1-2J-vmS" secondAttribute="bottom" id="rBt-In-bg1"/>
+                    <constraint firstItem="jz1-2J-vmS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="80" id="wDT-If-G49"/>
+                    <constraint firstItem="5x0-B3-d6i" firstAttribute="leading" secondItem="jz1-2J-vmS" secondAttribute="leading" id="zIl-aF-fhn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="activityIndicatorView" destination="jeR-pX-cJM" id="oVL-vx-Kz3"/>
+                <outlet property="backShadowView" destination="5x0-B3-d6i" id="tAM-qh-EM6"/>
+                <outlet property="imagWidthConstraint" destination="pnv-yP-w5C" id="3Fw-KA-uCZ"/>
+                <outlet property="imageFullPreviewButton" destination="QIA-Ng-Tts" id="QhR-yB-47G"/>
+                <outlet property="imageHeightConstraint" destination="bei-0q-4zD" id="AqC-XV-h9o"/>
+                <outlet property="imageLeadingConstraint" destination="wDT-If-G49" id="8sb-5F-itl"/>
+                <outlet property="mediaImageView" destination="jz1-2J-vmS" id="Wsx-iP-rSx"/>
+                <outlet property="openPdfButton" destination="s1L-ae-P0X" id="VqM-nz-C8t"/>
+                <outlet property="pdfIconImageView" destination="2eL-G7-7RK" id="jAx-9z-syt"/>
+                <outlet property="videoPlayButton" destination="dob-FU-CcY" id="4wM-kM-vTS"/>
+            </connections>
+            <point key="canvasLocation" x="57.600000000000001" y="84.107946026986511"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pdfColored" width="26" height="32"/>
+        <image name="play.png" width="62" height="62"/>
+    </resources>
+</document>

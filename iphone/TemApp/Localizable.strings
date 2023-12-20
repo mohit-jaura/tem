@@ -1,0 +1,134 @@
+/*
+ Localizable.strings
+ BaseProject
+ 
+ Created by TpSingh on 21/03/17.
+ Copyright © 2017 Capovela LLC. All rights reserved.
+ */
+//OTP Verification Screen
+"timer"="Timer :";
+"sec"="sec";
+
+//API Response erorr
+"Setting" = "Open Settings";
+"requestTimeOut" = "Looks like the server is taking too long to respond, this can be caused by either poor connectivity or an error with our servers. Please try again in a while";
+"internalServerError" = "The server has encountered an unknown error.\n It doesn't appear to have affected your data, but our technical staff have been automatically notified and will be looking into this with the utmost urgency.";
+"sessionExpired" = "Sorry, but looks like you have logged in the same user in some another device";
+"clientError" = "The application has encountered an unknown error.\n It doesn't appear to have affected your data, but our technical staff have been automatically notified and will be looking into this with the utmost urgency.";
+
+"emptyDOB" = "Please select your date of birth";
+"emptyGender" = "Please select your gender";
+"emptyLocation" = "Please enter your location";
+"emailNotFound" = "Sorry, we didn't found any E-mail address associated with your account.Please signup manually";
+"validNewPasswordRange" = "Please enter password between 8 to 16 characters. Your password should include atleast one uppercase, number and special character.";
+"newConfirmMismatch" = "Password and confirm password do not match.";
+"newEmptyPassword" = "Please enter your new password";
+"emptyCurrentPassword" = "Please enter your current password";
+"emptyConfirmPassword" = "Please enter confirm password.";
+"uppercaseCharacter" = "Please enter Atleast one uppercase character.";
+"lowercaseCharacter" = "Please enter Atleast one lowercase character.";
+"number" = "Please enter Atleast one number.";
+"specialCharacter" = "Please enter Atleast one special character.";
+"validUsernameRange" = "Please enter name between 3 to 25 alphabets.";
+
+//Alerts Text
+
+
+
+"OK" = "OK";
+"CANCEL" = "CANCEL";
+"Yes" = "Yes";
+"No" = "No";
+"Alert" = "Alert";
+"logoutMessage" = "Are you sure you want to logout?";
+"pleaseWait" = "please wait";
+"chooseGender" = "Choose Gender";
+"genderMessage" = "Select your gender";
+"actionSheet" = "Action Sheet";
+"unknownError" = "Unable to find error.";
+"invalidUrl" = "Url is invalid.";
+"dataNotFound" = "Data not found.";
+"invalidJson" = "Invalid JSON response.";
+"missingKeys" = "Missing key for dictionary or array.";
+"invalidData" = "Invalid data.";
+"responseError" = "Response Error";
+"dictNotFound" = "Unable to find info dictionary for application.";
+
+"noInternet" = "Oops! Your internet is gone. Please check your internet connection";
+
+//Buttons Name
+"HIDE" = "Hide";
+"SHOW" = "Show";
+"UPDATE" = "Update";
+"LOGOUT" = "Logout";
+
+//Screens Titles
+"login" = "Login";
+"registration" = "Registration";
+"forgotPassword" = "Forgot Password";
+"userProfile" = "User Profile";
+"facebookLogin" = "Log in with Facebook";
+"googleLogin" = "Log in with Google";
+"linkedInLogin" = "Log in with LinkedIn";
+"editProfile" = "Edit Profile";
+
+//Dictionary Keys
+//"emailAddress" = "emailAddress";
+
+
+
+
+// MARK: Registration Page
+"emptyFirstname" = "Please enter first name.";
+"maxLengthFirstname" = "Please enter first name between 2 to 20 characters.";
+"maxLengthLastname" = "Please enter last name between 2 to 40 characters.";
+"emptyEmailOrPhone" = "Please enter your email or phone number.";
+"emptyEmail" = "Please enter your email address.";
+"invalidEmail" = "Please enter valid email.";
+"invalidPhoneNumber" = "Please enter a valid phone number between 8 to 16.";
+"emptyPassword" = "Please enter password.";
+"invalidPassword" = "Please enter password between 8 to 16 characters. Your password should include atleast one uppercase, number and special character.";
+"Please enter first name." = "Please enter first name.";
+"Please enter phone number." = "Please enter phone number.";
+
+
+// MARK: Create Profile.
+
+"emptyUserName" = "Username must contain atleast one letter.";
+"invalidUserName" = "Username must contain atleast three characters.";
+"emptyDateOfBirth" = "Please fill your date of birth.";
+"emptyUserLocation" = "Please enter your location.";
+"emptyHeight" = "Please fill height field to continue.";
+"emptyWeight" = "Please fill weight field to continue.";
+"emptyGender" = "Please select your gender";
+"emptyGym" = "Please enter your gym or club";
+
+// MARK: Metric value.
+
+"metricEmptyValue" = "Please enter valid value.";
+
+// MARK: Create Event
+"emptyEventTitle" = "Please enter title for your event.";
+"emptyStartDate" = "Please select start date and time of event.";
+"emptyEndDate" = "Please select end date and time of event.";
+"emptyEventLocation" = "Please enter event location.";
+"emptyRecurranceType" = "Please select recurring type of event.";
+"emptyTemates" = "Please select temates of event.";
+"emptyEventDescription" = "Please enter title for your event.";
+"emptyEndsOn" = "Please select when a recurring event end.";
+
+"noFaq" = "No faqs data found.";
+"noBlockedUser" = "you have not blocked any user yet.";
+
+
+// MARK: Settings.
+// MARK: Contact Us
+"emptyContactSubject" = "Please add your subject.";
+"emptyContactDesc" = "Please add your Feedback.";
+
+
+// MARK: Change Password
+"newPasswordBlank" = "Please enter new password.";
+"currentPasswordBlank" = "Please enter current password.";
+"confirmPasswordBlank" = "Please confirm new password.";
+"passwordDoesnotMatch" = "Password and confirm password do not match.";

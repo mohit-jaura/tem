@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="svF-B2-Rhr" customClass="TaskTableHeaderView" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="524" height="153"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="AhD-w5-ReO">
+                    <rect key="frame" x="75" y="0.0" width="304" height="33"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cT-gN-oCh">
+                    <rect key="frame" x="374" y="43" width="125" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="R8q-SL-RQW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="ADD SUBTASK +"/>
+                    <connections>
+                        <action selector="addSubtaskTapped:" destination="-2" eventType="touchUpInside" id="5Ca-ry-Rgg"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq8-2m-Mi6">
+                    <rect key="frame" x="25" y="118" width="474" height="1"/>
+                    <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="4HK-OC-zq3"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eTH-PO-xnv">
+                    <rect key="frame" x="389" y="1.6666666666666679" width="115" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BYr-yS-Ydw">
+                            <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="85" id="Ecu-J7-9N9"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="ADD MEDIA +">
+                                <color key="titleColor" red="0.36458149550000002" green="0.88183701039999995" blue="0.86059743170000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="addMediaTapped:" destination="svF-B2-Rhr" eventType="touchUpInside" id="UkQ-cL-egV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1s-ku-lFC">
+                            <rect key="frame" x="85" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="Giv-hD-GAM"/>
+                                <constraint firstAttribute="height" constant="30" id="RZd-9S-jzk"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="deleteRed"/>
+                            <connections>
+                                <action selector="deleteTapped:" destination="svF-B2-Rhr" eventType="touchUpInside" id="zA4-EA-wGk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hN6-Rn-xap" userLabel="ShowMediaStack View">
+                    <rect key="frame" x="75" y="66" width="424" height="50"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LCb-Mm-wT6">
+                            <rect key="frame" x="0.0" y="0.0" width="424" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="qdj-SF-Zoj"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kOw-Qp-Oij">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="ztQ-Tl-gzb"/>
+                                <outlet property="delegate" destination="-1" id="5Ad-6T-nxk"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="8DX-3K-4aw"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fq8-2m-Mi6" firstAttribute="trailing" secondItem="4cT-gN-oCh" secondAttribute="trailing" id="61r-7t-12Z"/>
+                <constraint firstItem="eTH-PO-xnv" firstAttribute="leading" secondItem="AhD-w5-ReO" secondAttribute="trailing" constant="10" id="6mY-Mp-JCG"/>
+                <constraint firstItem="fq8-2m-Mi6" firstAttribute="leading" secondItem="svF-B2-Rhr" secondAttribute="leading" constant="25" id="8kS-DS-e6i"/>
+                <constraint firstItem="hN6-Rn-xap" firstAttribute="top" secondItem="4cT-gN-oCh" secondAttribute="bottom" constant="1" id="CRr-N5-AwI"/>
+                <constraint firstAttribute="trailing" secondItem="eTH-PO-xnv" secondAttribute="trailing" constant="20" symbolic="YES" id="FQB-JK-xDV"/>
+                <constraint firstItem="eTH-PO-xnv" firstAttribute="centerY" secondItem="AhD-w5-ReO" secondAttribute="centerY" id="RXs-wi-dcg"/>
+                <constraint firstItem="fq8-2m-Mi6" firstAttribute="top" secondItem="hN6-Rn-xap" secondAttribute="bottom" constant="2" id="TOq-NP-npg"/>
+                <constraint firstItem="AhD-w5-ReO" firstAttribute="leading" secondItem="svF-B2-Rhr" secondAttribute="leading" constant="75" id="iHg-wh-Q1H"/>
+                <constraint firstItem="hN6-Rn-xap" firstAttribute="trailing" secondItem="4cT-gN-oCh" secondAttribute="trailing" id="ill-Ei-ERi"/>
+                <constraint firstAttribute="trailing" secondItem="4cT-gN-oCh" secondAttribute="trailing" constant="25" id="jAe-Mf-iWj"/>
+                <constraint firstItem="8DX-3K-4aw" firstAttribute="bottom" secondItem="fq8-2m-Mi6" secondAttribute="bottom" id="oWN-Qm-Eia"/>
+                <constraint firstItem="hN6-Rn-xap" firstAttribute="leading" secondItem="AhD-w5-ReO" secondAttribute="leading" id="roD-yf-gyh"/>
+                <constraint firstItem="AhD-w5-ReO" firstAttribute="top" secondItem="svF-B2-Rhr" secondAttribute="top" id="t6M-Vn-PdG"/>
+                <constraint firstItem="4cT-gN-oCh" firstAttribute="top" secondItem="AhD-w5-ReO" secondAttribute="bottom" constant="10" id="x7T-tp-4VH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addMediaButton" destination="BYr-yS-Ydw" id="Zwx-64-mQQ"/>
+                <outlet property="collectionViewHeight" destination="qdj-SF-Zoj" id="YMi-PK-Auu"/>
+                <outlet property="deleteButton" destination="W1s-ku-lFC" id="bLq-v8-s4L"/>
+                <outlet property="mediaCollectionView" destination="LCb-Mm-wT6" id="Q4A-tr-nne"/>
+                <outlet property="subtaskButton" destination="4cT-gN-oCh" id="nQF-xT-0Cw"/>
+                <outlet property="taskNameLAbel" destination="AhD-w5-ReO" id="V1e-KM-ZUl"/>
+            </connections>
+            <point key="canvasLocation" x="248.85496183206106" y="-115.14084507042254"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="deleteRed" width="19" height="20.333333969116211"/>
+    </resources>
+</document>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NetworkHeader" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="392" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEI-gB-8Oo" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                    <rect key="frame" x="20" y="15" width="352" height="73"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 Pending Requests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdE-kU-AvJ">
+                            <rect key="frame" x="18" y="0.0" width="307" height="73"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="right-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-cs-ZWy">
+                            <rect key="frame" x="343" y="28" width="9" height="17"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.24313727020000001" green="0.24313727020000001" blue="0.24313727020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="cbf-cs-ZWy" secondAttribute="trailing" id="2e6-fF-UAi"/>
+                        <constraint firstItem="rdE-kU-AvJ" firstAttribute="leading" secondItem="NEI-gB-8Oo" secondAttribute="leading" constant="18" id="T26-PU-S0a"/>
+                        <constraint firstItem="rdE-kU-AvJ" firstAttribute="top" secondItem="NEI-gB-8Oo" secondAttribute="top" id="ZMO-HR-i2R"/>
+                        <constraint firstItem="cbf-cs-ZWy" firstAttribute="centerY" secondItem="NEI-gB-8Oo" secondAttribute="centerY" id="gSa-Lx-p5o"/>
+                        <constraint firstAttribute="bottom" secondItem="rdE-kU-AvJ" secondAttribute="bottom" id="hwt-ZR-hPt"/>
+                        <constraint firstItem="cbf-cs-ZWy" firstAttribute="leading" secondItem="rdE-kU-AvJ" secondAttribute="trailing" constant="18" id="tAF-Pw-rgn"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaJ-7X-OFX">
+                    <rect key="frame" x="0.0" y="11" width="392" height="77"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                    <connections>
+                        <action selector="expandCollapseTapped:" destination="iN0-l3-epB" eventType="touchUpInside" id="OAj-b2-h4M"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qaJ-7X-OFX" secondAttribute="bottom" id="2aD-1m-ikX"/>
+                <constraint firstItem="qaJ-7X-OFX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5fc-e5-uTO"/>
+                <constraint firstItem="NEI-gB-8Oo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="8XX-qb-taE"/>
+                <constraint firstItem="qaJ-7X-OFX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="11" id="8Yt-bJ-vbL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="NEI-gB-8Oo" secondAttribute="bottom" id="KzH-p2-yCb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NEI-gB-8Oo" secondAttribute="trailing" constant="20" id="Viv-hE-1Hz"/>
+                <constraint firstItem="NEI-gB-8Oo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="jOA-pO-dCf"/>
+                <constraint firstItem="qaJ-7X-OFX" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="pMU-lc-U1I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backView" destination="NEI-gB-8Oo" id="vu7-Fs-cXH"/>
+                <outlet property="dropDownImgVw" destination="cbf-cs-ZWy" id="beU-YR-WBP"/>
+                <outlet property="expandCollapseBtn" destination="qaJ-7X-OFX" id="u7k-Pg-Coa"/>
+                <outlet property="titleLbl" destination="rdE-kU-AvJ" id="IuB-yz-5i0"/>
+            </connections>
+            <point key="canvasLocation" x="154" y="-26"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="right-arrow" width="9.5" height="17.5"/>
+    </resources>
+</document>

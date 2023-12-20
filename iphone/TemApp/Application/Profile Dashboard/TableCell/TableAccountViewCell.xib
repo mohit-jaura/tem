@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableAccountViewCell" rowHeight="361" id="KGk-i7-Jjw" customClass="TableAccountViewCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="361"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="361"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRH-vD-sKn">
+                        <rect key="frame" x="16" y="30" width="288" height="45"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="sPa-sH-QdV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <state key="normal" title="Account">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Cqi-RH-swm"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVq-DW-oa7" userLabel="Link Devices">
+                        <rect key="frame" x="16" y="95" width="288" height="45"/>
+                        <color key="backgroundColor" red="0.21364575620000001" green="0.58783024549999996" blue="0.87468284370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <state key="normal" title="Link Devices">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bpo-Es-OJ5"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mL4-ds-Zl9">
+                        <rect key="frame" x="16" y="160" width="288" height="45"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <state key="normal" title="Link Apps">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aVK-9P-Trb"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66w-Va-ofa">
+                        <rect key="frame" x="16" y="225" width="288" height="45"/>
+                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <state key="normal" title="Notifications">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hV8-1e-l3K"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exM-Pl-y5L" userLabel="Link Apps">
+                        <rect key="frame" x="16" y="290" width="288" height="45"/>
+                        <color key="backgroundColor" red="0.21364575620000001" green="0.58783024549999996" blue="0.87468284370000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                        <state key="normal" title="Privacy">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="22"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="action:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rd5-L0-Vtx"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFD-MJ-fPy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="361"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upl-VB-9aR">
+                                <rect key="frame" x="6" y="2" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="6JZ-eN-sHQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="b4Z-JY-ymY"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="back"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EsH-bi-w6y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="upl-VB-9aR" firstAttribute="top" secondItem="jFD-MJ-fPy" secondAttribute="top" constant="2" id="6so-Gq-1dL"/>
+                            <constraint firstAttribute="height" constant="361" id="Bar-Qs-sYw"/>
+                            <constraint firstItem="upl-VB-9aR" firstAttribute="leading" secondItem="jFD-MJ-fPy" secondAttribute="leading" constant="6" id="Blk-mx-UnL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="exM-Pl-y5L" firstAttribute="width" secondItem="66w-Va-ofa" secondAttribute="width" id="0qu-rT-RDP"/>
+                    <constraint firstItem="mL4-ds-Zl9" firstAttribute="leading" secondItem="RVq-DW-oa7" secondAttribute="leading" id="5Ch-Ew-g08"/>
+                    <constraint firstItem="RVq-DW-oa7" firstAttribute="leading" secondItem="uRH-vD-sKn" secondAttribute="leading" id="9YW-OA-Xsv"/>
+                    <constraint firstItem="66w-Va-ofa" firstAttribute="leading" secondItem="mL4-ds-Zl9" secondAttribute="leading" id="9b8-10-qVO"/>
+                    <constraint firstItem="exM-Pl-y5L" firstAttribute="top" secondItem="66w-Va-ofa" secondAttribute="bottom" constant="20" id="BpH-nr-aj0"/>
+                    <constraint firstItem="66w-Va-ofa" firstAttribute="height" secondItem="mL4-ds-Zl9" secondAttribute="height" id="CNt-Ah-J1D"/>
+                    <constraint firstItem="RVq-DW-oa7" firstAttribute="height" secondItem="uRH-vD-sKn" secondAttribute="height" id="EXP-cM-WxK"/>
+                    <constraint firstItem="mL4-ds-Zl9" firstAttribute="top" secondItem="RVq-DW-oa7" secondAttribute="bottom" constant="20" id="HJF-YO-6iw"/>
+                    <constraint firstAttribute="trailing" secondItem="jFD-MJ-fPy" secondAttribute="trailing" id="IKx-NN-V7U"/>
+                    <constraint firstAttribute="trailing" secondItem="uRH-vD-sKn" secondAttribute="trailing" constant="16" id="SLM-aD-4TQ"/>
+                    <constraint firstItem="uRH-vD-sKn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="UZ6-Ot-tnH"/>
+                    <constraint firstItem="jFD-MJ-fPy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ud9-PQ-v1L"/>
+                    <constraint firstItem="jFD-MJ-fPy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="VEe-Tk-0xF"/>
+                    <constraint firstItem="RVq-DW-oa7" firstAttribute="top" secondItem="uRH-vD-sKn" secondAttribute="bottom" constant="20" id="Viy-Yj-Ox7"/>
+                    <constraint firstItem="66w-Va-ofa" firstAttribute="top" secondItem="mL4-ds-Zl9" secondAttribute="bottom" constant="20" id="byC-cC-ZnG"/>
+                    <constraint firstItem="uRH-vD-sKn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eOH-1q-T0l"/>
+                    <constraint firstItem="mL4-ds-Zl9" firstAttribute="trailing" secondItem="RVq-DW-oa7" secondAttribute="trailing" id="jbO-xi-SBY"/>
+                    <constraint firstItem="RVq-DW-oa7" firstAttribute="trailing" secondItem="uRH-vD-sKn" secondAttribute="trailing" id="kuT-0u-6Ee"/>
+                    <constraint firstItem="exM-Pl-y5L" firstAttribute="leading" secondItem="66w-Va-ofa" secondAttribute="leading" id="lB1-gz-3Py"/>
+                    <constraint firstItem="66w-Va-ofa" firstAttribute="trailing" secondItem="mL4-ds-Zl9" secondAttribute="trailing" id="niZ-gp-WAK"/>
+                    <constraint firstItem="mL4-ds-Zl9" firstAttribute="height" secondItem="RVq-DW-oa7" secondAttribute="height" id="yF0-Va-gwk"/>
+                    <constraint firstItem="exM-Pl-y5L" firstAttribute="height" secondItem="66w-Va-ofa" secondAttribute="height" id="zmn-6b-wsm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="button" destination="uRH-vD-sKn" id="lu6-zB-gMu"/>
+                <outlet property="view" destination="jFD-MJ-fPy" id="cfu-Nc-z6X"/>
+                <outlet property="viewHeight" destination="Bar-Qs-sYw" id="JRd-XQ-PiN"/>
+            </connections>
+            <point key="canvasLocation" x="66.666666666666671" y="96.09375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="back" width="13" height="22"/>
+    </resources>
+</document>

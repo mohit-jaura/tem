@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCategoryHeader" rowHeight="72" id="sGE-L4-XzX" customClass="SearchCategoryHeader" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sGE-L4-XzX" id="Uhm-1c-BI1">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Saa-UH-9J1">
+                        <rect key="frame" x="0.0" y="0.0" width="395" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="DFO-Dz-xT8"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndF-DA-Bv2">
+                        <rect key="frame" x="-4" y="6" width="198.5" height="61"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="30.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.37823292609999998" green="0.91298615930000004" blue="0.88789433240000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbA-Bg-LyG">
+                        <rect key="frame" x="26" y="11" width="143.5" height="51"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" name="CustomGrayColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Saa-UH-9J1" firstAttribute="leading" secondItem="Uhm-1c-BI1" secondAttribute="leading" id="7Tz-CM-FXd"/>
+                    <constraint firstItem="rbA-Bg-LyG" firstAttribute="top" secondItem="ndF-DA-Bv2" secondAttribute="top" constant="5" id="8rz-hz-1xW"/>
+                    <constraint firstItem="ndF-DA-Bv2" firstAttribute="leading" secondItem="Uhm-1c-BI1" secondAttribute="leading" constant="-4" id="OmA-m9-n90"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ndF-DA-Bv2" secondAttribute="trailing" constant="5" id="Swd-Wk-y47"/>
+                    <constraint firstItem="rbA-Bg-LyG" firstAttribute="bottom" secondItem="ndF-DA-Bv2" secondAttribute="bottom" constant="-5" id="bnC-94-KLt"/>
+                    <constraint firstItem="rbA-Bg-LyG" firstAttribute="leading" secondItem="ndF-DA-Bv2" secondAttribute="leading" constant="30" id="dC0-vf-3AB"/>
+                    <constraint firstAttribute="trailing" secondItem="Saa-UH-9J1" secondAttribute="trailing" id="dIB-FC-rn4"/>
+                    <constraint firstItem="ndF-DA-Bv2" firstAttribute="top" secondItem="Uhm-1c-BI1" secondAttribute="top" constant="6" id="epR-8X-giu"/>
+                    <constraint firstItem="rbA-Bg-LyG" firstAttribute="trailing" secondItem="ndF-DA-Bv2" secondAttribute="trailing" constant="-25" id="kie-xx-0Kr"/>
+                    <constraint firstItem="Saa-UH-9J1" firstAttribute="top" secondItem="Uhm-1c-BI1" secondAttribute="top" id="tII-b3-UWb"/>
+                    <constraint firstAttribute="bottom" secondItem="ndF-DA-Bv2" secondAttribute="bottom" constant="5" id="zJN-eD-7Oo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="headerBackgroundView" destination="ndF-DA-Bv2" id="xrF-0i-dB1"/>
+                <outlet property="label" destination="rbA-Bg-LyG" id="Tgw-l4-2vZ"/>
+                <outlet property="topSeparator" destination="Saa-UH-9J1" id="Mvd-f6-aOS"/>
+            </connections>
+            <point key="canvasLocation" x="-260" y="98"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CustomGrayColor">
+            <color red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

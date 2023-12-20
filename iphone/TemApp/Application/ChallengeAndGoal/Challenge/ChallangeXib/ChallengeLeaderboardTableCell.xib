@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChallengeLeaderboardTableCell" rowHeight="200" id="KGk-i7-Jjw" customClass="ChallengeLeaderboardTableCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="472" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="472" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Pz-O5-OxA">
+                        <rect key="frame" x="0.0" y="0.0" width="472" height="200"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="LEADERBOARD" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEl-Gk-wGr">
+                        <rect key="frame" x="6" y="15" width="459" height="16.5"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-ci-Iwf" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                        <rect key="frame" x="5" y="36.5" width="462" height="158.5"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="158.5" id="OEh-jM-QlA"/>
+                        </constraints>
+                    </view>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mbe-Z4-Xo9">
+                        <rect key="frame" x="10" y="41.5" width="452" height="148.5"/>
+                        <color key="backgroundColor" name="appThemeColorGrayish"/>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="Nj0-z1-baj"/>
+                            <outlet property="delegate" destination="-1" id="zKy-Mm-Ir2"/>
+                        </connections>
+                    </tableView>
+                </subviews>
+                <color key="backgroundColor" name="appThemeColorGrayish"/>
+                <constraints>
+                    <constraint firstItem="mEl-Gk-wGr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="32n-CG-adT"/>
+                    <constraint firstAttribute="trailing" secondItem="ahJ-ci-Iwf" secondAttribute="trailing" constant="5" id="5eI-yN-8ct"/>
+                    <constraint firstItem="Mbe-Z4-Xo9" firstAttribute="top" secondItem="ahJ-ci-Iwf" secondAttribute="top" constant="5" id="J7m-BH-cuG"/>
+                    <constraint firstItem="ahJ-ci-Iwf" firstAttribute="top" secondItem="mEl-Gk-wGr" secondAttribute="bottom" constant="5" id="KC0-Uf-1mY"/>
+                    <constraint firstItem="Mbe-Z4-Xo9" firstAttribute="leading" secondItem="ahJ-ci-Iwf" secondAttribute="leading" constant="5" id="Qxs-hK-E4f"/>
+                    <constraint firstItem="mEl-Gk-wGr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="R0t-Af-JBt"/>
+                    <constraint firstAttribute="bottom" secondItem="ahJ-ci-Iwf" secondAttribute="bottom" constant="5" id="Toy-qS-5hW"/>
+                    <constraint firstItem="Mbe-Z4-Xo9" firstAttribute="trailing" secondItem="ahJ-ci-Iwf" secondAttribute="trailing" constant="-5" id="UDn-rg-ZLS"/>
+                    <constraint firstAttribute="trailing" secondItem="mEl-Gk-wGr" secondAttribute="trailing" constant="7" id="ad1-JW-EIG"/>
+                    <constraint firstAttribute="bottom" secondItem="8Pz-O5-OxA" secondAttribute="bottom" id="e53-iN-Sft"/>
+                    <constraint firstItem="8Pz-O5-OxA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hMb-HQ-Fz5"/>
+                    <constraint firstAttribute="trailing" secondItem="8Pz-O5-OxA" secondAttribute="trailing" id="iZg-cK-wTB"/>
+                    <constraint firstItem="8Pz-O5-OxA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="mK2-DV-0VL"/>
+                    <constraint firstItem="ahJ-ci-Iwf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="o5F-1f-MCB"/>
+                    <constraint firstItem="Mbe-Z4-Xo9" firstAttribute="bottom" secondItem="ahJ-ci-Iwf" secondAttribute="bottom" constant="-5" id="xCw-BX-tgf"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="backShadowView" destination="ahJ-ci-Iwf" id="FI2-O9-DDt"/>
+                <outlet property="shadowViewHeight" destination="OEh-jM-QlA" id="1IJ-lQ-PlN"/>
+                <outlet property="table" destination="Mbe-Z4-Xo9" id="Wrc-LW-7Qb"/>
+            </connections>
+            <point key="canvasLocation" x="84.799999999999997" y="28.785607196401802"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="appThemeColorGrayish">
+            <color red="0.24313725490196078" green="0.24313725490196078" blue="0.24313725490196078" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

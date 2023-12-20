@@ -1,0 +1,93 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'TemApp' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+
+    # Pods for TemApp
+    pod 'Alamofire', '4.9.1'
+    pod 'IQKeyboardManagerSwift'
+    pod 'Kingfisher'
+    pod 'NVActivityIndicatorView/Extended'
+    pod 'Firebase/CoreOnly'
+    pod 'SwiftLint'
+    pod 'Firebase/Firestore'
+    pod 'Cosmos'
+    pod 'Firebase/Storage'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Messaging'
+    pod 'Firebase'
+    pod 'Firebase/DynamicLinks'
+    #pod 'Socket.IO-Client-Swift'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    pod 'Firebase/Analytics'
+    pod 'Firebase/Crashlytics'
+   #pod 'MWPhotoBrowser'5
+    pod 'GoogleSignIn', '5.0.2'
+    pod 'GooglePlaces'
+    #pod 'Instabug'
+    pod 'AgoraRtcEngine_iOS', '3.7.1'
+    #  pod 'MWPhotoBrowser', '~> 2.1.2'
+
+    #for videos and photo
+    pod 'Lightbox'
+
+    #  pod 'Viewer'
+    #AWSS3Bucket SDK
+    #pod 'AWSS3' #, '2.9.1'
+
+    # Library to detect mute button changes
+    pod 'Mute' #, '0.5.0'
+
+    pod 'KeychainSwift' #, '13.0.0'
+
+    #crashlytics
+#    pod 'Fabric'
+#    pod 'Crashlytics'
+
+    #Side Menu
+    pod 'SideMenu' #, '~> 6.4.4'
+
+    pod 'BezierPathLength'
+    pod 'AFNetworking', '4.0.1'
+    pod 'Reachability'
+    #UILabel drop-in replacement supporting Hashtags (#), Mentions (@), URLs (http://) and custom regex patterns, written in Swift
+    #pod 'ActiveLabel'
+
+    pod 'AMPopTip', '4.1.0'
+    pod 'Charts'
+    #pod 'Instabug'
+    pod 'WMSegmentControl'
+
+    pod 'SwiftDate', '6.3.1'
+    pod 'SSNeumorphicView'
+
+end
+target 'TemWatchApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Tem WatchKit App
+  pod 'Alamofire', '4.9.1'
+
+end
+
+target 'TemWatchApp Extension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Tem WatchKit Extension
+  pod 'Alamofire', '4.9.1'
+
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+    end
+  end
+end

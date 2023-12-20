@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FilesInfo" representedClassName="FilesInfo" syncable="YES">
+        <attribute name="firebaseurl" optional="YES" attributeType="String"/>
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="previewurl" optional="YES" attributeType="String"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+        <relationship name="spot_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Postinfo" inverseName="files_rel" inverseEntity="Postinfo"/>
+        <relationship name="tag_rel" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Tag" inverseName="media_rel" inverseEntity="Tag"/>
+    </entity>
+    <entity name="LikesInfo" representedClassName="LikesInfo" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="profilePic" optional="YES" attributeType="String"/>
+        <relationship name="spot_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Postinfo" inverseName="likes_rel" inverseEntity="Postinfo"/>
+    </entity>
+    <entity name="PostAddress" representedClassName="PostAddress" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" defaultValueString=" "/>
+        <attribute name="cordinates" optional="YES" attributeType="Transformable" defaultValueString=" "/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="state" optional="YES" attributeType="String" defaultValueString=" "/>
+        <relationship name="spot_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Postinfo" inverseName="address_rel" inverseEntity="Postinfo"/>
+    </entity>
+    <entity name="Postinfo" representedClassName="Postinfo" syncable="YES">
+        <attribute name="commentsCount" optional="YES" attributeType="String"/>
+        <attribute name="dateTime" optional="YES" attributeType="String"/>
+        <attribute name="hasmedia" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="isuploaded" optional="YES" attributeType="Boolean" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="likedByMe" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="likesCount" optional="YES" attributeType="String"/>
+        <attribute name="localId" optional="YES" attributeType="String"/>
+        <attribute name="tem_post_type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="uploadingInProgress" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="address_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="PostAddress" inverseName="spot_rel" inverseEntity="PostAddress"/>
+        <relationship name="files_rel" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="FilesInfo" inverseName="spot_rel" inverseEntity="FilesInfo"/>
+        <relationship name="likes_rel" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="LikesInfo" inverseName="spot_rel" inverseEntity="LikesInfo"/>
+        <relationship name="tag_rel" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Tag" inverseName="spot_rel" inverseEntity="Tag"/>
+        <relationship name="user_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="UserDetail" inverseName="spot_rel" inverseEntity="UserDetail"/>
+    </entity>
+    <entity name="Tag" representedClassName="Tag" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="pointX" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="pointY" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="profilePic" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="media_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="FilesInfo" inverseName="tag_rel" inverseEntity="FilesInfo"/>
+        <relationship name="spot_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Postinfo" inverseName="tag_rel" inverseEntity="Postinfo"/>
+    </entity>
+    <entity name="UserDetail" representedClassName="UserDetail" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="postId" optional="YES" attributeType="String"/>
+        <attribute name="profilePic" optional="YES" attributeType="String"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+        <relationship name="spot_rel" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Postinfo" inverseName="user_rel" inverseEntity="Postinfo"/>
+    </entity>
+    <elements>
+        <element name="FilesInfo" positionX="-234" positionY="-135" width="128" height="195"/>
+        <element name="LikesInfo" positionX="-486" positionY="-342" width="128" height="90"/>
+        <element name="PostAddress" positionX="-317" positionY="-490" width="128" height="150"/>
+        <element name="Postinfo" positionX="-684" positionY="-198" width="128" height="269"/>
+        <element name="Tag" positionX="-486" positionY="-342" width="128" height="195"/>
+        <element name="UserDetail" positionX="-468" positionY="-324" width="128" height="150"/>
+    </elements>
+</model>

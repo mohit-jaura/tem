@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddFriendCell" rowHeight="55" id="2bY-dz-P8U" customClass="AddFriendCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="382" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2bY-dz-P8U" id="CFU-rd-ig4">
+                <rect key="frame" x="0.0" y="0.0" width="382" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy" translatesAutoresizingMaskIntoConstraints="NO" id="T3J-4f-tFS">
+                        <rect key="frame" x="15" y="5.5" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="Umh-tj-ZnI"/>
+                            <constraint firstAttribute="height" constant="44" id="z8A-yG-UOB"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9r-VU-lcM">
+                        <rect key="frame" x="76" y="0.0" width="184.5" height="54.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <color key="textColor" red="0.23921568630000001" green="0.25098039220000001" blue="0.32549019610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UXu-HG-0PR">
+                        <rect key="frame" x="274" y="5.5" width="98" height="44"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7E-K9-0BT">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="Bd1-cF-fly"/>
+                                </constraints>
+                                <state key="normal" image="users_plus"/>
+                                <connections>
+                                    <action selector="actionAddFriend:" destination="2bY-dz-P8U" eventType="touchUpInside" id="9e5-Ak-ij3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CEz-ef-u5N" userLabel="Button Two">
+                                <rect key="frame" x="54" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="9UX-1f-VZs"/>
+                                </constraints>
+                                <state key="normal" image="users_plus"/>
+                                <connections>
+                                    <action selector="actionCancel:" destination="2bY-dz-P8U" eventType="touchUpInside" id="Tw6-UP-zwm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="F2a-SI-9on"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UXu-HG-0PR" firstAttribute="centerY" secondItem="CFU-rd-ig4" secondAttribute="centerY" id="1u4-YY-2IG"/>
+                    <constraint firstItem="UXu-HG-0PR" firstAttribute="leading" secondItem="D9r-VU-lcM" secondAttribute="trailing" constant="13.5" id="5Fx-zo-fiE"/>
+                    <constraint firstAttribute="trailing" secondItem="UXu-HG-0PR" secondAttribute="trailing" constant="10" id="6m9-je-HBW"/>
+                    <constraint firstAttribute="bottom" secondItem="D9r-VU-lcM" secondAttribute="bottom" id="EfD-Mq-eR5"/>
+                    <constraint firstItem="T3J-4f-tFS" firstAttribute="leading" secondItem="CFU-rd-ig4" secondAttribute="leading" constant="15" id="FZY-2h-cht"/>
+                    <constraint firstItem="T3J-4f-tFS" firstAttribute="centerY" secondItem="CFU-rd-ig4" secondAttribute="centerY" id="SmU-RS-dtx"/>
+                    <constraint firstItem="D9r-VU-lcM" firstAttribute="top" secondItem="CFU-rd-ig4" secondAttribute="top" id="hER-FJ-omc"/>
+                    <constraint firstItem="D9r-VU-lcM" firstAttribute="leading" secondItem="T3J-4f-tFS" secondAttribute="trailing" constant="17" id="pKN-EF-FpU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="3Ag-ky-bjZ"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="btnAdd" destination="V7E-K9-0BT" id="6vy-2p-iCT"/>
+                <outlet property="btnCancel" destination="CEz-ef-u5N" id="294-5L-dgK"/>
+                <outlet property="imgProfile" destination="T3J-4f-tFS" id="KAF-Q0-TOy"/>
+                <outlet property="lblName" destination="D9r-VU-lcM" id="q67-jq-FZN"/>
+            </connections>
+            <point key="canvasLocation" x="89.599999999999994" y="46.326836581709152"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="dummy" width="88" height="88"/>
+        <image name="users_plus" width="21" height="17"/>
+    </resources>
+</document>

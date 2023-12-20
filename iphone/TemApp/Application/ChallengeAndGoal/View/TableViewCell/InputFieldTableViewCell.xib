@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="InputFieldTableViewCell" rowHeight="60" id="KGk-i7-Jjw" customClass="InputFieldTableViewCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="474" height="55"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5N0-B0-DJc" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                        <rect key="frame" x="40" y="10" width="334" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="AqW-e8-0zX"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Woy-gg-sqx" customClass="CustomTextField" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="45" y="15" width="324" height="30"/>
+                        <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="width">
+                                <real key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="labelTitle" value="NAME"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="avatar"/>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8y-3V-KCF">
+                        <rect key="frame" x="45" y="20" width="284" height="25"/>
+                        <state key="normal">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="topButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vSo-O8-TEq"/>
+                        </connections>
+                    </button>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGy-0U-7x6" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                        <rect key="frame" x="388" y="15" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="6Gk-hi-UJS"/>
+                            <constraint firstAttribute="height" constant="30" id="jlo-qz-cXd"/>
+                        </constraints>
+                    </view>
+                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMp-T2-jaq">
+                        <rect key="frame" x="390.5" y="17.5" width="25" height="25"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="selected" image="Oval Copy 3"/>
+                        <connections>
+                            <action selector="toggleButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="siM-9e-o6b"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5N0-B0-DJc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Aqn-3V-SD3"/>
+                    <constraint firstItem="Woy-gg-sqx" firstAttribute="trailing" secondItem="5N0-B0-DJc" secondAttribute="trailing" constant="-5" id="FO1-om-B1J"/>
+                    <constraint firstItem="Woy-gg-sqx" firstAttribute="leading" secondItem="5N0-B0-DJc" secondAttribute="leading" constant="5" id="HT7-ln-Qo8"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="OGy-0U-7x6" secondAttribute="trailing" constant="40" id="HdA-3D-zO5"/>
+                    <constraint firstItem="KMp-T2-jaq" firstAttribute="height" secondItem="OGy-0U-7x6" secondAttribute="height" multiplier="0.833333" id="Hgd-Jw-VCB"/>
+                    <constraint firstItem="OGy-0U-7x6" firstAttribute="centerY" secondItem="5N0-B0-DJc" secondAttribute="centerY" id="Jdb-6h-pK2"/>
+                    <constraint firstItem="Woy-gg-sqx" firstAttribute="top" secondItem="5N0-B0-DJc" secondAttribute="top" constant="5" id="RBn-6Z-Z7K"/>
+                    <constraint firstItem="KMp-T2-jaq" firstAttribute="centerY" secondItem="OGy-0U-7x6" secondAttribute="centerY" id="RML-9N-8D9"/>
+                    <constraint firstItem="KMp-T2-jaq" firstAttribute="centerX" secondItem="OGy-0U-7x6" secondAttribute="centerX" id="Va3-td-hKz"/>
+                    <constraint firstItem="v8y-3V-KCF" firstAttribute="bottom" secondItem="Woy-gg-sqx" secondAttribute="bottom" id="Yu9-P6-ycX"/>
+                    <constraint firstAttribute="bottom" secondItem="5N0-B0-DJc" secondAttribute="bottom" constant="5" id="bXt-eT-1mB"/>
+                    <constraint firstItem="Woy-gg-sqx" firstAttribute="bottom" secondItem="5N0-B0-DJc" secondAttribute="bottom" constant="-5" id="bmb-Kl-6RX"/>
+                    <constraint firstItem="OGy-0U-7x6" firstAttribute="leading" secondItem="5N0-B0-DJc" secondAttribute="trailing" constant="14" id="fgt-Vh-GZA"/>
+                    <constraint firstItem="KMp-T2-jaq" firstAttribute="width" secondItem="OGy-0U-7x6" secondAttribute="width" multiplier="0.833333" id="jx2-NT-Mow"/>
+                    <constraint firstItem="5N0-B0-DJc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="mW4-gt-GrX"/>
+                    <constraint firstItem="v8y-3V-KCF" firstAttribute="top" secondItem="Woy-gg-sqx" secondAttribute="top" constant="5" id="pYf-30-CGu"/>
+                    <constraint firstItem="v8y-3V-KCF" firstAttribute="trailing" secondItem="Woy-gg-sqx" secondAttribute="trailing" constant="-40" id="rDA-Vv-o1K"/>
+                    <constraint firstItem="v8y-3V-KCF" firstAttribute="leading" secondItem="Woy-gg-sqx" secondAttribute="leading" id="sQa-PK-CfF"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputTextField" destination="Woy-gg-sqx" id="ytA-6L-CAU"/>
+                <outlet property="inputTextFieldShadowView" destination="5N0-B0-DJc" id="oVZ-SI-Ax9"/>
+                <outlet property="toggleButton" destination="KMp-T2-jaq" id="zEn-Qe-4P2"/>
+                <outlet property="toggleButtonShadowView" destination="OGy-0U-7x6" id="Joy-jF-6DX"/>
+                <outlet property="toggleButtonTrailingConstraint" destination="HdA-3D-zO5" id="lNQ-e5-MtV"/>
+                <outlet property="topButton" destination="v8y-3V-KCF" id="MIG-1Z-i6I"/>
+            </connections>
+            <point key="canvasLocation" x="256" y="172.26386806596702"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="Woy-gg-sqx">
+            <size key="intrinsicContentSize" width="43" height="15.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Oval Copy 3" width="13" height="13"/>
+        <image name="avatar" width="14.5" height="17.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

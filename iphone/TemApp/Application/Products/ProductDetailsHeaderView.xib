@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProductDetailsHeaderView" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="305"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="w87-S7-zLT">
+                    <rect key="frame" x="10" y="10" width="394" height="275"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5KJ-fe-3cm">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="eiy-Hn-qCr">
+                    <rect key="frame" x="129.5" y="279" width="155.5" height="26"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnN-zg-2R0">
+                    <rect key="frame" x="349" y="25" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BnN-zg-2R0" secondAttribute="height" multiplier="1:1" id="gIR-bP-oqA"/>
+                        <constraint firstAttribute="height" constant="35" id="zWR-rO-xZi"/>
+                    </constraints>
+                    <color key="tintColor" red="0.24459469319999999" green="0.51105570789999999" blue="0.86281234029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" image="Shape"/>
+                    <connections>
+                        <action selector="likeButAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="hok-LQ-fcE"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="BnN-zg-2R0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="25" id="0Bh-UW-PuQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eiy-Hn-qCr" secondAttribute="bottom" id="45X-7l-Qra"/>
+                <constraint firstItem="w87-S7-zLT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="4ND-bQ-UXj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="w87-S7-zLT" secondAttribute="bottom" constant="20" id="Gxl-UF-vc0"/>
+                <constraint firstItem="eiy-Hn-qCr" firstAttribute="centerX" secondItem="w87-S7-zLT" secondAttribute="centerX" id="SEz-vr-XHW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BnN-zg-2R0" secondAttribute="trailing" constant="30" id="V5j-1A-aC7"/>
+                <constraint firstItem="w87-S7-zLT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="alu-aT-sfq"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="w87-S7-zLT" secondAttribute="trailing" constant="10" id="sG3-dY-6n8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageCollView" destination="w87-S7-zLT" id="hbJ-C4-gC3"/>
+                <outlet property="likeButOut" destination="BnN-zg-2R0" id="1De-yW-gRT"/>
+                <outlet property="pageViewController" destination="eiy-Hn-qCr" id="R11-jo-2rY"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="39.84375"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Shape" width="25" height="23"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

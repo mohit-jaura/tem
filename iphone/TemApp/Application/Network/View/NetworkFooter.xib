@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NetworkFooter" rowHeight="40" id="A2w-QF-d0w" customClass="NetworkFooter" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="A2w-QF-d0w" id="u9V-SM-OPC">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9cN-2r-CuB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                        <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                        <state key="normal" title="Show More">
+                            <color key="titleColor" red="0.52941176469999995" green="0.53725490200000003" blue="0.61568627450000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.52941176469999995" green="0.53725490200000003" blue="0.61568627450000002" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="actionShowMore:" destination="A2w-QF-d0w" eventType="touchUpInside" id="Qk0-7S-NsD"/>
+                        </connections>
+                    </button>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="dov-mF-eLA">
+                        <rect key="frame" x="177.5" y="10" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="9cN-2r-CuB" firstAttribute="leading" secondItem="u9V-SM-OPC" secondAttribute="leading" id="3ZL-Rq-XDc"/>
+                    <constraint firstItem="9cN-2r-CuB" firstAttribute="top" secondItem="u9V-SM-OPC" secondAttribute="top" id="Bhc-j0-5JF"/>
+                    <constraint firstAttribute="bottom" secondItem="9cN-2r-CuB" secondAttribute="bottom" id="Ccj-GX-Xjy"/>
+                    <constraint firstAttribute="trailing" secondItem="9cN-2r-CuB" secondAttribute="trailing" id="WXr-ez-rwF"/>
+                    <constraint firstItem="dov-mF-eLA" firstAttribute="centerX" secondItem="u9V-SM-OPC" secondAttribute="centerX" id="hQ9-L6-1V6"/>
+                    <constraint firstItem="dov-mF-eLA" firstAttribute="centerY" secondItem="u9V-SM-OPC" secondAttribute="centerY" id="mDi-3h-V6C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="activityIndicator" destination="dov-mF-eLA" id="FbD-QW-Hcq"/>
+                <outlet property="btnShowMore" destination="9cN-2r-CuB" id="nwL-Rm-aJV"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="-11"/>
+        </tableViewCell>
+    </objects>
+</document>

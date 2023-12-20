@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostUploadingProgressTableViewCell" rowHeight="70" id="KGk-i7-Jjw" customClass="PostUploadingProgressTableViewCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="493" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="493" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFE-y0-pBf">
+                        <rect key="frame" x="0.0" y="0.0" width="493" height="61.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ImagePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="MrR-rd-jas">
+                                <rect key="frame" x="8" y="8.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="u0q-nh-5G6"/>
+                                    <constraint firstAttribute="width" constant="45" id="ucm-w4-g63"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pbl-ca-7e0">
+                                <rect key="frame" x="61" y="0.0" width="432" height="62"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="QN9-aV-MNb"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Will automatically post when possible" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GEh-M3-PfS">
+                                <rect key="frame" x="61" y="0.0" width="432" height="62"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="NewAppThemeColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MrR-rd-jas" secondAttribute="bottom" constant="8" id="6rH-Xt-f1b"/>
+                            <constraint firstItem="MrR-rd-jas" firstAttribute="top" secondItem="GFE-y0-pBf" secondAttribute="top" constant="8.5" id="9Os-4s-pEZ"/>
+                            <constraint firstItem="GEh-M3-PfS" firstAttribute="leading" secondItem="Pbl-ca-7e0" secondAttribute="leading" id="AMc-9U-CF8"/>
+                            <constraint firstItem="GEh-M3-PfS" firstAttribute="top" secondItem="Pbl-ca-7e0" secondAttribute="top" id="BjO-Px-op9"/>
+                            <constraint firstItem="GEh-M3-PfS" firstAttribute="trailing" secondItem="Pbl-ca-7e0" secondAttribute="trailing" id="EWB-IU-SND"/>
+                            <constraint firstItem="Pbl-ca-7e0" firstAttribute="leading" secondItem="MrR-rd-jas" secondAttribute="trailing" constant="8" id="M21-0B-Kiz"/>
+                            <constraint firstItem="MrR-rd-jas" firstAttribute="leading" secondItem="GFE-y0-pBf" secondAttribute="leading" constant="8" id="RzF-rG-Dad"/>
+                            <constraint firstItem="Pbl-ca-7e0" firstAttribute="top" secondItem="GFE-y0-pBf" secondAttribute="top" id="VSu-8B-N3X"/>
+                            <constraint firstItem="Pbl-ca-7e0" firstAttribute="centerY" secondItem="MrR-rd-jas" secondAttribute="centerY" id="Z7G-ic-wRi"/>
+                            <constraint firstAttribute="trailing" secondItem="Pbl-ca-7e0" secondAttribute="trailing" id="gIX-L1-1rH"/>
+                            <constraint firstItem="GEh-M3-PfS" firstAttribute="bottom" secondItem="Pbl-ca-7e0" secondAttribute="bottom" id="gtJ-bY-uKW"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="GFE-y0-pBf" secondAttribute="trailing" id="1M8-Pj-hnn"/>
+                    <constraint firstItem="GFE-y0-pBf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="2Xv-yx-iYs"/>
+                    <constraint firstItem="GFE-y0-pBf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3d3-Bd-uER"/>
+                    <constraint firstAttribute="bottom" secondItem="GFE-y0-pBf" secondAttribute="bottom" constant="10" id="Pzd-XZ-h7h"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="errorLabel" destination="GEh-M3-PfS" id="gzi-ih-oP4"/>
+                <outlet property="imgView" destination="MrR-rd-jas" id="Xt8-Mc-vCP"/>
+                <outlet property="progressView" destination="Pbl-ca-7e0" id="Uue-xB-wuT"/>
+            </connections>
+            <point key="canvasLocation" x="104.8" y="59.370314842578715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ImagePlaceHolder" width="112.5" height="112.5"/>
+        <namedColor name="NewAppThemeColor">
+            <color red="0.17254901960784313" green="0.18823529411764706" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="CreateRoundChecklistTableCell" selectionStyle="none" indentationWidth="10" rowHeight="98" id="KGk-i7-Jjw" customClass="CreateRoundChecklistTableCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="488" height="98"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="488" height="98"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6O6-D8-Z1T">
+                        <rect key="frame" x="10" y="10" width="468" height="78"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5q-mX-aim" customClass="SSNeumorphicView" customModule="SSNeumorphicView">
+                                <rect key="frame" x="0.0" y="0.0" width="468" height="78"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PoF-Xc-hzE">
+                                <rect key="frame" x="10" y="19" width="85" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHw-d9-RaV">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-4B-non">
+                                                <rect key="frame" x="5" y="0.0" width="30" height="40"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqr-h8-sX2">
+                                                <rect key="frame" x="5" y="0.0" width="30" height="40"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Bu9-4B-non" firstAttribute="leading" secondItem="PHw-d9-RaV" secondAttribute="leading" constant="5" id="6qA-py-t4m"/>
+                                            <constraint firstItem="Vqr-h8-sX2" firstAttribute="leading" secondItem="Bu9-4B-non" secondAttribute="leading" id="HGP-1x-xwn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bu9-4B-non" secondAttribute="trailing" constant="5" id="T3e-MF-D3a"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bu9-4B-non" secondAttribute="bottom" id="WUL-bX-5TJ"/>
+                                            <constraint firstItem="Vqr-h8-sX2" firstAttribute="top" secondItem="Bu9-4B-non" secondAttribute="top" id="f5X-vD-hyD"/>
+                                            <constraint firstAttribute="height" constant="40" id="fSm-Uw-znH"/>
+                                            <constraint firstAttribute="width" constant="40" id="kbk-79-EdG"/>
+                                            <constraint firstItem="Bu9-4B-non" firstAttribute="top" secondItem="PHw-d9-RaV" secondAttribute="top" id="nCE-PC-sU7"/>
+                                            <constraint firstItem="Vqr-h8-sX2" firstAttribute="trailing" secondItem="Bu9-4B-non" secondAttribute="trailing" id="vsP-fi-yAn"/>
+                                            <constraint firstItem="Vqr-h8-sX2" firstAttribute="bottom" secondItem="Bu9-4B-non" secondAttribute="bottom" id="yeg-5Z-Mb6"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdf" translatesAutoresizingMaskIntoConstraints="NO" id="YlZ-rB-p7P">
+                                        <rect key="frame" x="45" y="0.0" width="40" height="40"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="YlZ-rB-p7P" firstAttribute="height" secondItem="PHw-d9-RaV" secondAttribute="height" id="H00-z4-g2p"/>
+                                    <constraint firstItem="YlZ-rB-p7P" firstAttribute="width" secondItem="PHw-d9-RaV" secondAttribute="width" id="hZI-rs-uJ8"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="loreum ipsum dummy text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="WKT-Ce-oEC">
+                                <rect key="frame" x="110" y="5" width="348" height="68"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="NewAppThemeColor"/>
+                        <constraints>
+                            <constraint firstItem="PoF-Xc-hzE" firstAttribute="centerY" secondItem="WKT-Ce-oEC" secondAttribute="centerY" id="0dI-E6-eaL"/>
+                            <constraint firstAttribute="bottom" secondItem="q5q-mX-aim" secondAttribute="bottom" id="2a8-u9-oIB"/>
+                            <constraint firstItem="q5q-mX-aim" firstAttribute="top" secondItem="6O6-D8-Z1T" secondAttribute="top" id="Ee4-P5-P6k"/>
+                            <constraint firstAttribute="bottom" secondItem="WKT-Ce-oEC" secondAttribute="bottom" constant="5" id="Ga2-Qx-v0N"/>
+                            <constraint firstItem="WKT-Ce-oEC" firstAttribute="leading" secondItem="PoF-Xc-hzE" secondAttribute="trailing" constant="15" id="PO9-E4-wB3"/>
+                            <constraint firstAttribute="trailing" secondItem="q5q-mX-aim" secondAttribute="trailing" id="cwY-Cs-ZHJ"/>
+                            <constraint firstItem="PoF-Xc-hzE" firstAttribute="leading" secondItem="6O6-D8-Z1T" secondAttribute="leading" constant="10" id="fHU-3l-CYJ"/>
+                            <constraint firstItem="q5q-mX-aim" firstAttribute="leading" secondItem="6O6-D8-Z1T" secondAttribute="leading" id="mxr-M4-0gf"/>
+                            <constraint firstItem="WKT-Ce-oEC" firstAttribute="top" secondItem="6O6-D8-Z1T" secondAttribute="top" constant="5" id="sdc-a0-FaY"/>
+                            <constraint firstAttribute="height" constant="78" id="wal-CI-Bg9"/>
+                            <constraint firstAttribute="trailing" secondItem="WKT-Ce-oEC" secondAttribute="trailing" constant="10" id="xTU-3J-Xc3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="6O6-D8-Z1T" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Cws-TE-YBf"/>
+                    <constraint firstAttribute="bottom" secondItem="6O6-D8-Z1T" secondAttribute="bottom" constant="10" id="PcD-aq-cX2"/>
+                    <constraint firstAttribute="trailing" secondItem="6O6-D8-Z1T" secondAttribute="trailing" constant="10" id="oLr-4r-gmB"/>
+                    <constraint firstItem="6O6-D8-Z1T" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="yQG-Hn-6oy"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="blueImageView" destination="Bu9-4B-non" id="3mG-A8-z9e"/>
+                <outlet property="mediaImageView" destination="YlZ-rB-p7P" id="6KZ-jC-aee"/>
+                <outlet property="rankLbl" destination="Vqr-h8-sX2" id="JRS-SH-Hzt"/>
+                <outlet property="shadowView" destination="q5q-mX-aim" id="vaR-vq-CAA"/>
+                <outlet property="titleLbl" destination="WKT-Ce-oEC" id="G29-Ji-q4z"/>
+            </connections>
+            <point key="canvasLocation" x="253.62318840579712" y="125.89285714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="blue" width="120" height="139"/>
+        <image name="pdf" width="434" height="442"/>
+        <namedColor name="NewAppThemeColor">
+            <color red="0.17254901960784313" green="0.18823529411764706" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

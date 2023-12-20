@@ -1,0 +1,57 @@
+disabled_rules:
+- class_delegate_protocol
+- line_length
+- todo
+- file_length
+- identifier_name
+- nesting
+- function_parameter_count
+- orphaned_doc_comment
+- inclusive_language
+- comment_spacing
+- mark
+- redundant_optional_initialization
+- xctfail_message
+- cyclomatic_complexity
+- force_cast
+- type_name
+- shorthand_operator
+- type_body_length
+- large_tuple
+- force_try
+- invalid_line_separator_character
+- function_body_length
+
+opt_in_rules:
+- overridden_super_call
+- private_outlet
+- private_action
+- anyobject_protocol
+
+function_body_length:
+- 100 # warning
+- 150 # error
+
+type_body_length:
+- 300 # warning
+- 600 # error
+
+large_tuple:
+- 3 # warning
+- 5 # error
+
+type_name:
+    min_length: 1
+    max_length: 70
+
+custom_rules:
+  invalid_line_separator_character:
+    name: "Invalid Line Separator Character"
+    regex: "\u2028" # Any string matching unicode character U+2028 (line separator)
+    capture_group: 0
+    match_kinds: string
+    message: "Detected an invalid line separator character (U+2028) in the string."
+    severity: error
+
+excluded:
+- Pods

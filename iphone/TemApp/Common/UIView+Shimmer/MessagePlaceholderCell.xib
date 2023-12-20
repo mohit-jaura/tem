@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MessagePlaceholderCell" rowHeight="87" id="KGk-i7-Jjw" customClass="MessagePlaceholderCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynU-Mv-PkR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pq7-ff-gUW">
+                                <rect key="frame" x="55" y="8.5" width="113" height="40"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="gty-yx-IKr"/>
+                                    <constraint firstAttribute="height" constant="40" id="jtg-wp-a2W"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Path" translatesAutoresizingMaskIntoConstraints="NO" id="zfH-PW-FgG">
+                                <rect key="frame" x="55" y="47.5" width="34" height="14"/>
+                            </imageView>
+                            <imageView multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-dummy" translatesAutoresizingMaskIntoConstraints="NO" id="9vJ-wr-dyR">
+                                <rect key="frame" x="20" y="29" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="P7k-rZ-6x9"/>
+                                    <constraint firstAttribute="height" constant="30" id="oJ2-rp-rPc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="9vJ-wr-dyR" secondAttribute="bottom" constant="8" id="15T-um-boH"/>
+                            <constraint firstItem="zfH-PW-FgG" firstAttribute="top" secondItem="Pq7-ff-gUW" secondAttribute="bottom" constant="-1" id="Dik-HI-C9v"/>
+                            <constraint firstAttribute="height" constant="67" id="Knt-lj-sWA"/>
+                            <constraint firstItem="zfH-PW-FgG" firstAttribute="leading" secondItem="Pq7-ff-gUW" secondAttribute="leading" id="Mfj-2P-uHn"/>
+                            <constraint firstItem="Pq7-ff-gUW" firstAttribute="top" secondItem="ynU-Mv-PkR" secondAttribute="top" constant="8.5" id="ghV-2I-8Fb"/>
+                            <constraint firstItem="Pq7-ff-gUW" firstAttribute="leading" secondItem="9vJ-wr-dyR" secondAttribute="trailing" constant="5" id="n1p-xi-raO"/>
+                            <constraint firstItem="9vJ-wr-dyR" firstAttribute="leading" secondItem="ynU-Mv-PkR" secondAttribute="leading" constant="20" id="rBl-mU-TeR"/>
+                            <constraint firstAttribute="bottom" secondItem="Pq7-ff-gUW" secondAttribute="bottom" constant="18.5" id="rDc-DB-R0s"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woF-a1-OW9">
+                        <rect key="frame" x="0.0" y="67" width="320" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="gtM-0e-lEY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="woF-a1-OW9" secondAttribute="bottom" id="5wg-ws-g9r"/>
+                    <constraint firstAttribute="trailing" secondItem="woF-a1-OW9" secondAttribute="trailing" id="8Pd-hv-ihH"/>
+                    <constraint firstItem="ynU-Mv-PkR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8zc-ei-Atb"/>
+                    <constraint firstItem="woF-a1-OW9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BHN-tX-m4v"/>
+                    <constraint firstAttribute="trailing" secondItem="ynU-Mv-PkR" secondAttribute="trailing" id="JSk-3H-wlg"/>
+                    <constraint firstItem="woF-a1-OW9" firstAttribute="top" secondItem="ynU-Mv-PkR" secondAttribute="bottom" id="tON-nk-rVk"/>
+                    <constraint firstItem="ynU-Mv-PkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vE3-Kc-Qfw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="ynU-Mv-PkR" id="ITl-jm-1wW"/>
+                <outlet property="shimmerView" destination="Pq7-ff-gUW" id="OFP-9y-g1u"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="122.54464285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Path" width="34" height="14"/>
+        <image name="user-dummy" width="36.5" height="36.5"/>
+    </resources>
+</document>

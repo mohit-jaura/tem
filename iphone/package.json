@@ -1,0 +1,11 @@
+{
+  "name": "com.tem.app",
+  "version": "0.1.0",
+  "description": "Capovela TEM IOS app",
+  "scripts": {
+    "version:major": "node ./scripts/bump-version.js major",
+    "version:minor": "node ./scripts/bump-version.js minor",
+    "version:patch": "node ./scripts/bump-version.js patch",
+    "version:same": "node ./scripts/bump-version.js same"
+  }
+}

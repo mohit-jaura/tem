@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Tf5-Eb-Qnn" pageOrientation="vertical">
+    <device id="watch44"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold_0.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular_0.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--WChooseActivityVC-->
+        <scene sceneID="9zS-6V-Wa0">
+            <objects>
+                <controller identifier="WChooseActivityVC" id="Tf5-Eb-Qnn" customClass="WChooseActivityVC" customModule="TemWatchApp_Extension">
+                    <items>
+                        <table alignment="left" spacing="15" id="wNF-na-9ze">
+                            <items>
+                                <tableRow identifier="WChooseActivityRow" id="E9x-Kg-sDj" customClass="WChooseActivityRow" customModule="TemWatchApp_Extension">
+                                    <group key="rootItem" width="1" height="50" alignment="left" spacing="7" id="Z7H-On-YnW">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Outdoor Run" textAlignment="left" numberOfLines="2" id="l1S-bx-Dl5">
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cellLabel" destination="l1S-bx-Dl5" id="RhY-6B-lNf"/>
+                                    </connections>
+                                </tableRow>
+                                <tableRow identifier="AppVersionRow" id="g8x-nV-hlb" customClass="AppVersionRow" customModule="TemWatchApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="AGo-PI-DZ1">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="App version" textAlignment="center" id="1tP-h3-Duv">
+                                                <color key="textColor" name="CustomGrayColor"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="version" destination="1tP-h3-Duv" id="rl3-tY-Dmg"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <group width="1" alignment="left" hidden="YES" layout="vertical" id="X4w-Af-RmL">
+                            <items>
+                                <group width="1" height="30" alignment="left" id="4Vx-Zh-rbY">
+                                    <items>
+                                        <button height="30" alignment="left" title="Cancel" id="PW7-EG-rBN">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                            <connections>
+                                                <action selector="pickerCancelButtonAction" destination="Tf5-Eb-Qnn" id="VTI-n9-ePh"/>
+                                            </connections>
+                                        </button>
+                                        <button height="30" alignment="right" title="Done" id="bKm-sj-5w3">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                            <connections>
+                                                <action selector="pickerDoneButtonAction" destination="Tf5-Eb-Qnn" id="tWT-x6-KEm"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <picker width="1" alignment="left" id="tv8-q6-8tl">
+                                    <connections>
+                                        <action selector="pickerSelectedItemChangedWithValue:" destination="Tf5-Eb-Qnn" id="h1E-EP-vS2"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <group width="1" height="1" alignment="left" hidden="YES" id="bOn-W3-won">
+                            <items>
+                                <group width="1" height="1" alignment="left" id="tTB-y2-yEL">
+                                    <items>
+                                        <imageView alignment="center" verticalAlignment="center" image="Activity1" contentMode="scaleAspectFit" id="jSM-OE-fOa"/>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityIndicatorGroup" destination="bOn-W3-won" id="Tjf-dV-zsr"/>
+                        <outlet property="activityIndicatorImageView" destination="jSM-OE-fOa" id="9AX-DH-Ok6"/>
+                        <outlet property="itemPicker" destination="tv8-q6-8tl" id="g9I-HZ-M7e"/>
+                        <outlet property="pickerGroup" destination="X4w-Af-RmL" id="wQT-Io-lZo"/>
+                        <outlet property="table" destination="wNF-na-9ze" id="BeO-u3-19o"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="518" y="344"/>
+        </scene>
+        <!--WActivityActionsInterfaceController-->
+        <scene sceneID="7aj-Sl-1GW">
+            <objects>
+                <controller identifier="WActivityActionsInterfaceController" id="qK4-2s-772" customClass="WActivityActionsInterfaceController" customModule="TemWatchApp_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="0.0" id="kbs-U7-LIq">
+                            <items>
+                                <group width="1" alignment="center" contentMode="scaleAspectFit" id="Te1-ne-Mdd">
+                                    <items>
+                                        <group width="0.5" height="80" alignment="center" layout="overlap" spacing="0.0" id="TeH-fZ-tqo">
+                                            <items>
+                                                <button width="80" height="80" alignment="center" backgroundImage="addNew" id="hdH-42-ejh">
+                                                    <connections>
+                                                        <action selector="addNewActivityTapped" destination="qK4-2s-772" id="FNE-rh-2vT"/>
+                                                    </connections>
+                                                </button>
+                                                <label alignment="center" verticalAlignment="bottom" text="New" id="FqY-i4-dnu">
+                                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                        <group width="0.5" height="80" alignment="center" layout="overlap" id="uYP-FB-9Kx">
+                                            <items>
+                                                <button width="80" height="80" alignment="center" backgroundImage="pauseact" id="Arz-Mr-8Yb">
+                                                    <connections>
+                                                        <action selector="pausePlayTapped" destination="qK4-2s-772" id="xfH-Ux-jXm"/>
+                                                    </connections>
+                                                </button>
+                                                <label alignment="center" verticalAlignment="bottom" text="Pause" id="yTM-vT-fbO">
+                                                    <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="0.5" height="80" alignment="center" layout="overlap" id="0qu-NT-yG5">
+                                    <items>
+                                        <button width="80" height="80" alignment="center" backgroundImage="stop" id="wHE-lX-2BH">
+                                            <connections>
+                                                <action selector="stopButtonTapped" destination="qK4-2s-772" id="GRr-yE-kjp"/>
+                                            </connections>
+                                        </button>
+                                        <label alignment="center" verticalAlignment="bottom" text="Stop" id="c6R-Fo-1r5">
+                                            <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                        </label>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                        <group width="1" alignment="center" verticalAlignment="center" hidden="YES" id="odB-Vk-Hah">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" id="oWA-Rw-QSl"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityIndicatorGroup" destination="odB-Vk-Hah" id="R9Y-hL-81d"/>
+                        <outlet property="activityIndicatorImage" destination="oWA-Rw-QSl" id="ldT-4e-g1q"/>
+                        <outlet property="addNewButton" destination="hdH-42-ejh" id="fGt-xH-NgK"/>
+                        <outlet property="addNewGroup" destination="TeH-fZ-tqo" id="G4v-a5-wYR"/>
+                        <outlet property="buttonsGroup" destination="kbs-U7-LIq" id="3oj-3R-EsV"/>
+                        <outlet property="pauseButton" destination="Arz-Mr-8Yb" id="mzo-II-Y73"/>
+                        <outlet property="pausePlayGroup" destination="uYP-FB-9Kx" id="LDD-vY-3GH"/>
+                        <outlet property="stopButton" destination="wHE-lX-2BH" id="ony-DH-usF"/>
+                        <outlet property="stopGroup" destination="0qu-NT-yG5" id="04N-Nr-VPy"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="688" y="873"/>
+        </scene>
+        <!--Summary-->
+        <scene sceneID="hO1-0A-8SI">
+            <objects>
+                <controller identifier="WCompleteActivityVC" title="Summary" id="cWR-Zt-25E" customClass="WCompleteActivityVC" customModule="TemWatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="8" id="Hmz-W4-jsy">
+                            <items>
+                                <group width="1" alignment="center" layout="vertical" id="Mmk-wO-qqy" userLabel="TimeGroup">
+                                    <items>
+                                        <label alignment="center" text="Total Time" id="Znq-kV-cbs">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                        <label alignment="center" text="00:00:00" id="oRX-xG-DzK">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" layout="vertical" id="uds-bc-Cg6" userLabel="DistanceGroup">
+                                    <items>
+                                        <label alignment="center" text="Total Distance" id="cxo-r6-mMM">
+                                            <color key="textColor" red="0.0" green="0.58823529411764708" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                        <label alignment="center" text="0 Miles" id="Mzf-cO-b0B">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" layout="vertical" id="TDa-Ou-wtZ" userLabel="CaloriesGroup">
+                                    <items>
+                                        <label alignment="center" text="Total Calories" id="bqn-Qt-kJj">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                        <label alignment="center" text="0" id="r4i-80-058">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <group width="1" alignment="center" layout="vertical" id="eee-TV-A0A" userLabel="HeartRateGroup">
+                                    <items>
+                                        <label width="1" alignment="center" text="Average Heart Rate" textAlignment="center" numberOfLines="2" id="fRc-Wo-pzJ">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                        <label alignment="center" text="115" id="cAg-Zd-xbN">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                        </label>
+                                    </items>
+                                </group>
+                                <button width="0.80000000000000004" alignment="center" verticalAlignment="bottom" title="Complete" id="boB-Nu-0Xm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                    <connections>
+                                        <action selector="completeButtonTapped" destination="cWR-Zt-25E" id="hcY-7g-Mlp"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="caloriesLabel" destination="r4i-80-058" id="7yo-YR-yhh"/>
+                        <outlet property="distanceGroup" destination="uds-bc-Cg6" id="Nmj-vZ-FEc"/>
+                        <outlet property="distanceLabel" destination="Mzf-cO-b0B" id="WhV-S5-zog"/>
+                        <outlet property="heartRateGroup" destination="eee-TV-A0A" id="bhu-6e-C8B"/>
+                        <outlet property="heartRateLabel" destination="cAg-Zd-xbN" id="nxR-XD-NFZ"/>
+                        <outlet property="timeLabel" destination="oRX-xG-DzK" id="leA-Jl-SPC"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="748" y="344"/>
+        </scene>
+        <!--WInProgressActivityVC-->
+        <scene sceneID="r2b-1a-379">
+            <objects>
+                <controller identifier="WInProgressActivityVC" id="i7R-Ch-9f1" customClass="WInProgressActivityVC" customModule="TemWatchApp_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" spacing="1" id="raW-Y1-MIk">
+                            <items>
+                                <group width="1" height="0.17000000000000001" alignment="left" id="GIa-hl-TeL">
+                                    <items>
+                                        <label alignment="left" text="00:00:00" id="o3n-Pe-OX8">
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="23"/>
+                                            </variation>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" height="0.17000000000000001" alignment="left" hidden="YES" spacing="5" id="SjC-st-wFZ">
+                                    <items>
+                                        <label alignment="left" text="00'00&quot;" minimumScaleFactor="0.5" id="5Gt-zR-bFE">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label width="0.40000000000000002" alignment="left" verticalAlignment="center" text="In-Progress Mile" numberOfLines="2" minimumScaleFactor="0.5" id="YUy-gC-Xpc">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="11"/>
+                                            <variation key="device=watch38mm" width="0.5"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="9"/>
+                                            </variation>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" height="0.17000000000000001" alignment="left" hidden="YES" spacing="5" id="h84-Gh-d0H">
+                                    <items>
+                                        <label alignment="left" text="00'00&quot;" minimumScaleFactor="0.5" id="EdM-Fz-tgg">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label width="0.29999999999999999" alignment="left" text="Average Mile" textAlignment="left" numberOfLines="2" id="sdh-GV-ool">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="11"/>
+                                            <variation key="device=watch38mm" width="0.40000000000000002"/>
+                                            <variation key="device=watch40mm" verticalAlignment="center">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="9"/>
+                                            </variation>
+                                            <variation key="device=watch44mm" verticalAlignment="center" width="0.40000000000000002"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" height="0.17000000000000001" alignment="left" spacing="5" id="vmu-sW-uv1">
+                                    <items>
+                                        <label alignment="left" text="0.0" id="Bn9-Eu-fbf">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="Miles" id="2gt-e7-c4Y">
+                                            <color key="textColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                                            <variation key="device=watch40mm" verticalAlignment="bottom">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                            </variation>
+                                            <variation key="device=watch42mm" verticalAlignment="bottom"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" height="0.17000000000000001" alignment="left" spacing="5" id="xf1-f9-Pwm">
+                                    <items>
+                                        <label alignment="left" text="0" id="O5m-o1-7ov">
+                                            <color key="textColor" red="0.54509803921568623" green="0.76470588235294112" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="Cal" id="3a3-Bz-DcD">
+                                            <color key="textColor" red="0.54509803921568623" green="0.76470588235294112" blue="0.29019607843137252" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                                            <variation key="device=watch40mm" verticalAlignment="bottom">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                            </variation>
+                                            <variation key="device=watch42mm" verticalAlignment="bottom"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                                <group width="1" height="0.17000000000000001" alignment="left" hidden="YES" spacing="5" id="L4r-bo-h9D">
+                                    <items>
+                                        <label alignment="left" text="0" id="HEF-w8-G0Z">
+                                            <color key="textColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="25"/>
+                                            <variation key="device=watch40mm">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="20"/>
+                                            </variation>
+                                        </label>
+                                        <label alignment="left" verticalAlignment="bottom" text="BPM" id="0gw-CN-9Ho">
+                                            <color key="textColor" red="0.91372549020000005" green="0.1176470588" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="19"/>
+                                            <variation key="device=watch40mm" verticalAlignment="bottom">
+                                                <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                                            </variation>
+                                            <variation key="device=watch42mm" verticalAlignment="bottom"/>
+                                        </label>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </group>
+                            </items>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <variation key="device=watch40mm" spacing="1"/>
+                            <variation key="device=watch44mm" spacing="1"/>
+                        </group>
+                    </items>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="averageMileGroup" destination="h84-Gh-d0H" id="w7T-oW-w8T"/>
+                        <outlet property="averageMileTextLabel" destination="sdh-GV-ool" id="oVW-0y-JID"/>
+                        <outlet property="averageMileValueLabel" destination="EdM-Fz-tgg" id="vAz-bg-ix0"/>
+                        <outlet property="caloriesLabel" destination="O5m-o1-7ov" id="6uH-Ze-bXb"/>
+                        <outlet property="distanceGroup" destination="vmu-sW-uv1" id="iyC-uv-oNM"/>
+                        <outlet property="distanceLabel" destination="Bn9-Eu-fbf" id="moY-DB-1v3"/>
+                        <outlet property="durationLabel" destination="o3n-Pe-OX8" id="b1e-N8-f8v"/>
+                        <outlet property="heartRateGroup" destination="L4r-bo-h9D" id="4Qa-hA-TBU"/>
+                        <outlet property="heartRateLabel" destination="HEF-w8-G0Z" id="c9f-kk-mzn"/>
+                        <outlet property="inProgressMileGroup" destination="SjC-st-wFZ" id="hIi-5D-XKb"/>
+                        <outlet property="inProgressTextLabel" destination="YUy-gC-Xpc" id="IYt-EY-LGU"/>
+                        <outlet property="inProgressValueLabel" destination="5Gt-zR-bFE" id="JXK-pM-Rpo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="986.73913043478251" y="343.79464285714289"/>
+        </scene>
+        <!--PlayingViewInterfaceController-->
+        <scene sceneID="Y4l-8h-utf">
+            <objects>
+                <controller identifier="PlayingViewInterfaceController" id="LYI-VA-a82" customClass="PlayingViewInterfaceController" customModule="TemWatchApp_Extension">
+                    <items>
+                        <nowPlayingView alignment="left" id="AZD-QB-MY8"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="987" y="593"/>
+        </scene>
+        <!--CountdownInterfaceController-->
+        <scene sceneID="xab-YD-KDa">
+            <objects>
+                <controller identifier="CountdownInterfaceController" id="43A-ba-qSo" customClass="CountdownInterfaceController" customModule="TemWatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="overlap" id="m4r-Nd-Y2A">
+                            <items>
+                                <imageView alignment="center" verticalAlignment="center" image="blueHoneyComb" id="iYV-MK-Gxa"/>
+                                <label alignment="center" verticalAlignment="center" text="3" id="w3K-N6-ow3">
+                                    <fontDescription key="font" name="Roboto-Bold" family="Roboto" pointSize="40"/>
+                                </label>
+                                <imageView alignment="center" verticalAlignment="center" hidden="YES" id="Ii9-bY-LXl"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityIndicatorImage" destination="Ii9-bY-LXl" id="WKf-9X-Crd"/>
+                        <outlet property="honeyCombView" destination="iYV-MK-Gxa" id="XEb-Xu-VYM"/>
+                        <outlet property="timerLabel" destination="w3K-N6-ow3" id="lry-Hh-8bR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1211" y="593"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" numberOfLines="0" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                        <segue destination="eXb-UN-Cd0" kind="relationship" relationship="dynamicInteractiveNotificationInterface" id="mpB-YA-K8N"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="206" y="873"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TemWatchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="987"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="Niz-AI-uX2">
+            <objects>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="TemWatchApp" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="459" y="749"/>
+        </scene>
+        <!--WActivityLogVC-->
+        <scene sceneID="EB8-mY-LOt">
+            <objects>
+                <controller identifier="WActivityLogVC" backgroundImage="screen4-bg" id="6f5-UM-X4m" customClass="WActivityLogVC" customModule="TemWatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="DDt-PV-hwD">
+                            <items>
+                                <table alignment="left" id="k8M-2E-QaP">
+                                    <items>
+                                        <tableRow identifier="WActivityLogRow" id="7xk-Pr-Fh9" customClass="WActivityLogRow" customModule="TemWatchApp_Extension">
+                                            <group key="rootItem" width="1" alignment="left" spacing="7" id="wsR-vf-cQY">
+                                                <items>
+                                                    <imageView width="7" height="7" alignment="left" verticalAlignment="center" image="dot" id="Fhk-KR-05n">
+                                                        <color key="tintColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </imageView>
+                                                    <label width="75" alignment="left" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="2" id="bzQ-mv-hsQ">
+                                                        <color key="textColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    </label>
+                                                    <label alignment="right" verticalAlignment="center" text="Label" textAlignment="left" numberOfLines="2" id="Tp8-yR-T0h">
+                                                        <color key="textColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                                    </label>
+                                                </items>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </group>
+                                            <connections>
+                                                <outlet property="cellTextLabel" destination="Tp8-yR-T0h" id="eQD-xS-5SC"/>
+                                                <outlet property="cellTitleLabel" destination="bzQ-mv-hsQ" id="gBF-SQ-ig8"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                                <group width="1" height="1" alignment="left" hidden="YES" id="ez0-dz-y9u">
+                                    <items>
+                                        <group width="1" height="1" alignment="left" id="mvb-Zh-ZSC">
+                                            <items>
+                                                <imageView alignment="center" verticalAlignment="center" image="Activity1" contentMode="scaleAspectFit" id="DHf-9D-WhB"/>
+                                            </items>
+                                            <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </group>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="activityIndicatorGroup" destination="ez0-dz-y9u" id="1Hc-wh-GMk"/>
+                        <outlet property="activityIndicatorImageView" destination="DHf-9D-WhB" id="k0V-hz-PkZ"/>
+                        <outlet property="tblView" destination="k8M-2E-QaP" id="jMp-Uu-9C5"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="297" y="52"/>
+        </scene>
+        <!--CompleteActivityListVC-->
+        <scene sceneID="Z3I-i1-m89">
+            <objects>
+                <controller identifier="CompleteActivityListVC" backgroundImage="screen4-bg" id="QIP-eT-XSd" customClass="CompleteActivityListVC" customModule="TemWatchApp_Extension">
+                    <items>
+                        <table alignment="left" id="OKK-ez-d10">
+                            <items>
+                                <tableRow identifier="CompleteActivityRow" id="mgm-t9-34g" customClass="CompleteActivityRow" customModule="TemWatchApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" spacing="7" id="BLT-oq-n8Y">
+                                        <items>
+                                            <imageView width="15" height="15" alignment="left" verticalAlignment="center" image="default-icon" id="i7f-Iv-AZl">
+                                                <color key="tintColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                            <label width="60" alignment="left" verticalAlignment="center" text="Run" textAlignment="left" numberOfLines="0" id="UhK-PC-JnX">
+                                                <color key="textColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            </label>
+                                            <group alignment="right" verticalAlignment="center" layout="vertical" id="qzZ-fh-DJQ">
+                                                <items>
+                                                    <label alignment="right" verticalAlignment="center" text="0:00:00" textAlignment="right" id="SDZ-M0-eid">
+                                                        <color key="textColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    </label>
+                                                    <label alignment="right" verticalAlignment="center" text="0.0 Calories" textAlignment="right" id="xle-Kf-fUH">
+                                                        <color key="textColor" red="0.094117647060000004" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="font" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                        </items>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="cellCaloriesLabel" destination="xle-Kf-fUH" id="eu7-hb-h4g"/>
+                                        <outlet property="cellDurationLabel" destination="SDZ-M0-eid" id="Bt5-Xa-eyH"/>
+                                        <outlet property="cellImageView" destination="i7f-Iv-AZl" id="1JI-MT-tgY"/>
+                                        <outlet property="cellTitleLabel" destination="UhK-PC-JnX" id="Ont-Zo-5hp"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="activityTblView" destination="OKK-ez-d10" id="BHV-IO-6fE"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="748" y="593"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.58823529409999997" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+    <resources>
+        <image name="Activity1" width="36" height="36"/>
+        <image name="addNew" width="113" height="113"/>
+        <image name="blueHoneyComb" width="120" height="139"/>
+        <image name="default-icon" width="40" height="32"/>
+        <image name="dot" width="6" height="6"/>
+        <image name="pauseact" width="113" height="113"/>
+        <image name="screen4-bg" width="162" height="199"/>
+        <image name="stop" width="113" height="113"/>
+        <namedColor name="CustomGrayColor">
+            <color red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

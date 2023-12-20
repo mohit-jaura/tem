@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="200" id="KGk-i7-Jjw" customClass="SeeAllCoachingCell" customModule="TemApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="371" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="371" height="200"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-39-NEm">
+                        <rect key="frame" x="84.666666666666657" y="10" width="278.33333333333337" height="136.66666666666666"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="dssds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qt9-hb-dco">
+                        <rect key="frame" x="84" y="151" width="50.000000000000014" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="6jY-Rp-2sE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Sfr-V6-ldI" customClass="CircularImgView" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Sfr-V6-ldI" secondAttribute="height" multiplier="1:1" id="Ed0-4U-Xm5"/>
+                            <constraint firstAttribute="width" constant="50" id="kHe-3g-qgo"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="be4-WB-V95">
+                        <rect key="frame" x="15" y="70" width="40" height="25"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTL-xy-hlw" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="10" y="65" width="50" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="Kqt-fz-9gD"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="msgAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TaB-SI-WaH"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcN-aA-ZSp">
+                        <rect key="frame" x="84" y="184" width="275" height="2"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.59999999999999998" id="CM4-n7-LCx"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChU-LU-7e8" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="50" height="50"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="profileAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jnn-nM-GYd"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgJ-sk-XtY" customClass="CustomButton" customModule="TemApp" customModuleProvider="target">
+                        <rect key="frame" x="20" y="105" width="30" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="W3s-PK-Eic"/>
+                            <constraint firstAttribute="height" constant="35" id="qme-kA-oHj"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" backgroundImage="bookmark icon"/>
+                        <state key="selected" backgroundImage="bookmarkFilled"/>
+                        <connections>
+                            <action selector="bookmarkAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vEM-pn-WjY"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5oG-39-NEm" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="0.75" id="2Dx-0C-BZo"/>
+                    <constraint firstItem="be4-WB-V95" firstAttribute="leading" secondItem="bTL-xy-hlw" secondAttribute="leading" constant="5" id="42S-xB-bPg"/>
+                    <constraint firstItem="BcN-aA-ZSp" firstAttribute="leading" secondItem="qt9-hb-dco" secondAttribute="leading" id="4qt-dh-oZ8"/>
+                    <constraint firstItem="ChU-LU-7e8" firstAttribute="leading" secondItem="Sfr-V6-ldI" secondAttribute="leading" id="65A-NT-d3y"/>
+                    <constraint firstItem="5oG-39-NEm" firstAttribute="top" secondItem="Sfr-V6-ldI" secondAttribute="top" id="7gF-Uy-W13"/>
+                    <constraint firstItem="BcN-aA-ZSp" firstAttribute="trailing" secondItem="5oG-39-NEm" secondAttribute="trailing" id="APP-jR-3Lk"/>
+                    <constraint firstItem="bTL-xy-hlw" firstAttribute="centerX" secondItem="Sfr-V6-ldI" secondAttribute="centerX" id="E0q-MW-j8D"/>
+                    <constraint firstAttribute="bottom" secondItem="BcN-aA-ZSp" secondAttribute="bottom" constant="10" id="FC1-mx-0rv"/>
+                    <constraint firstItem="bTL-xy-hlw" firstAttribute="top" secondItem="Sfr-V6-ldI" secondAttribute="bottom" constant="5" id="HZp-vc-2rf"/>
+                    <constraint firstItem="ChU-LU-7e8" firstAttribute="bottom" secondItem="Sfr-V6-ldI" secondAttribute="bottom" id="IVK-0K-Yfc"/>
+                    <constraint firstItem="ChU-LU-7e8" firstAttribute="top" secondItem="Sfr-V6-ldI" secondAttribute="top" id="IpD-dN-b54"/>
+                    <constraint firstItem="BcN-aA-ZSp" firstAttribute="top" secondItem="qt9-hb-dco" secondAttribute="bottom" constant="7" id="Kcx-A2-oLF"/>
+                    <constraint firstItem="Sfr-V6-ldI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Qog-gO-srn"/>
+                    <constraint firstItem="bTL-xy-hlw" firstAttribute="width" secondItem="Sfr-V6-ldI" secondAttribute="width" id="Uae-vw-SXD"/>
+                    <constraint firstItem="qt9-hb-dco" firstAttribute="leading" secondItem="5oG-39-NEm" secondAttribute="leading" id="YBz-0B-zN9"/>
+                    <constraint firstItem="be4-WB-V95" firstAttribute="top" secondItem="bTL-xy-hlw" secondAttribute="top" constant="5" id="Yqd-cR-6fs"/>
+                    <constraint firstItem="IgJ-sk-XtY" firstAttribute="centerX" secondItem="bTL-xy-hlw" secondAttribute="centerX" id="Yqg-VV-DJF"/>
+                    <constraint firstItem="IgJ-sk-XtY" firstAttribute="top" secondItem="bTL-xy-hlw" secondAttribute="bottom" constant="5" id="YtY-Zp-Zqo"/>
+                    <constraint firstItem="5oG-39-NEm" firstAttribute="width" secondItem="5oG-39-NEm" secondAttribute="height" multiplier="120:59" id="ar5-nk-7PC"/>
+                    <constraint firstItem="ChU-LU-7e8" firstAttribute="trailing" secondItem="Sfr-V6-ldI" secondAttribute="trailing" id="fIc-WB-gDK"/>
+                    <constraint firstItem="qt9-hb-dco" firstAttribute="top" secondItem="5oG-39-NEm" secondAttribute="bottom" constant="7" id="gOh-ex-ivB"/>
+                    <constraint firstItem="5oG-39-NEm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jhN-pz-tUI"/>
+                    <constraint firstItem="be4-WB-V95" firstAttribute="bottom" secondItem="bTL-xy-hlw" secondAttribute="bottom" constant="-5" id="niB-7d-FdG"/>
+                    <constraint firstItem="be4-WB-V95" firstAttribute="trailing" secondItem="bTL-xy-hlw" secondAttribute="trailing" constant="-5" id="vkS-os-UOe"/>
+                    <constraint firstAttribute="trailing" secondItem="5oG-39-NEm" secondAttribute="trailing" constant="8" id="xPD-DY-r8O"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backgroundImageView" destination="5oG-39-NEm" id="Noo-Lt-NyH"/>
+                <outlet property="bookmarkButOut" destination="IgJ-sk-XtY" id="roj-oJ-cB1"/>
+                <outlet property="msgButOut" destination="bTL-xy-hlw" id="3Bo-Pb-jNb"/>
+                <outlet property="nameLabel" destination="qt9-hb-dco" id="5PU-Kf-WlX"/>
+                <outlet property="profileButOut" destination="ChU-LU-7e8" id="sJt-f6-cFc"/>
+                <outlet property="profileImgView" destination="Sfr-V6-ldI" id="rfk-Zd-csC"/>
+            </connections>
+            <point key="canvasLocation" x="63.846153846153847" y="56.872037914691937"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bookmark icon" width="27" height="33"/>
+        <image name="bookmarkFilled" width="25" height="31"/>
+        <image name="email" width="16.666666030883789" height="12.333333015441895"/>
+    </resources>
+</document>

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Complete Activity Screen (My Health).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Complete Activity Screen (My Health)@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Complete Activity Screen (My Health)@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
